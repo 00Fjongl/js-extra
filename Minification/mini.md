@@ -39,14 +39,15 @@ a=a-4.5|0&&a;
 /*
 Order:
 0. (Parentheses)
-1. Unary (!,~,-) and Exponent (**)
-2. Addition and subraction (+,-)
-3. Multiplication, division, and remainder (*,/,%)
-4. Bit shift (<<,>>)
-5. Comparison (<,<=,>,>=,==,!=,===,!==)
-6. Bitwise (^,&,|)
-7. Logic (&&,||)
-8. Ternary (condition?true:false)
+1. Chaining (.,?.)
+2. Unary (!,~,-) and Exponent (**)
+3. Addition and subraction (+,-)
+4. Multiplication, division, and remainder (*,/,%)
+5. Bit shift (<<,>>)
+6. Comparison (<,<=,>,>=,==,!=,===,!==)
+7. Bitwise (^,&,|)
+8. Logic (&&,||) and Nullish Coalescing (??)
+9. Ternary (condition?true:false)
 */
 ```
 Some switch statements may also be replaced with arrays.
