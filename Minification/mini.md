@@ -11,6 +11,7 @@
 //shortened
 (a,b,c,s=String,h='hasOwnProperty')=>a+b+c+s[h]()+s[h]();
 ```
+The tables below outline the minimum number of times something needs to be used, before it can be shortened.
 Property | Min. | Examples
 -------- | ---- | --------
 `.1234567890+` | 2 | `.codePointAt`, `.charCodeAt`, etc.
@@ -37,10 +38,10 @@ Every additional variable included will save 2 bytes each, regardless of string 
 (a,b='meaningless')=>a[b]+a.length+a.length+a.length;
 (a,b='meaningless')=>a[b]+a[b='length']+a[b]+a[b];
 ```
-Property | Minimum Uses
--------- | ----
-`.12345678+` | 2
-`.12345(67)` | 3
+Property | Min. | Examples
+-------- | ---- | --------
+`.12345678+` | 2 | `.prototype`
+`.12345(67)` | 3 | `.split`, `.slice`, `.round`
 `.1234` | 4
 `.123` | 7
 
