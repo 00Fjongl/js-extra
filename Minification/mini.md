@@ -39,8 +39,7 @@ a=a-4.5|0&&a;
 /*
 Order:
 0. (Parentheses)
-1. Logical NOT, Bitwise NOT, and Unary Negation (!,~,-)
-2. Exponent (**)
+1. Unary (!,~,-) and Exponent (**)
 3. Addition and subraction (+,-)
 4. Multiplication, division, and remainder (*,/,%)
 5. Bit shift (<<,>>)
