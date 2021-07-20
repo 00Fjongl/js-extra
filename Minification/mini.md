@@ -13,7 +13,7 @@
 Property | Min. | Examples
 -------- | ---- | --------
 `.1234567890+` | 2 | `.codePointAt`, `.charCodeAt`, etc.
-`.123456(789)` | 3 | `.replace`, `.length`, `.random`, etc.
+`.123456(789)` | 3 | `.replace`, `.length`, `.filter`, etc.
 `.12345` | 4 | `.split`, `.slice`, `.round`
 `.1234` | 5 | `.join`, `.ceil`
 `.123` | 9 | `.map`
