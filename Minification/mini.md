@@ -55,7 +55,8 @@ Order:
 ```
 Some switch statements may also be replaced with arrays.
 ```js
-switch(){}
+switch(a){case'dog':b='cat';break;case'water':b='ice';break;default:a='dog'}
+a=['dog','cat','ice'][['dog','water'].indexOf(a)+1];
 ```
 The grave accent, or backtick, can be used for both expression interpolation and function parsing.
 ```js
