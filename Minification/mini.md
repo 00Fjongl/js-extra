@@ -35,6 +35,17 @@ a>3&a<6&&(a=0);
 a=a>3&a<6?0:a;
 a=a<4|a>5&&a;
 a=a-4.5|0&&a;
+
+/*
+Order:
+1. Logical NOT (!)
+2. Math (+,-,*,/,**)
+3. Bit shift (<<,>>)
+3. Comparison (<,<=,>,>=)
+4. Bitwise (^,&,|)
+5. Logic (&&,||)
+6. Ternary (condition?true:false)
+*/
 ```
 Some switch statements may also be replaced with arrays.
 ```js
