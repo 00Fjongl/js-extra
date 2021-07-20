@@ -3,6 +3,10 @@
 ```js
 //example
 (a,b,c)=>a+b+c+String.hasOwnProperty()+String.hasOwnProperty();
+//shortened object
+(a,b,c,s=String)=>a+b+c+s.hasOwnProperty()+s.hasOwnProperty();
+//shortened property
+(a,b,c,h='hasOwnProperty')=>a+b+c+String[h]()+String[h]();
 //shortened
 (a,b,c,s=String,h='hasOwnProperty')=>a+b+c+s[h]()+s[h]();
 ```
