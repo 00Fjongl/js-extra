@@ -16,7 +16,7 @@ In standard browsers, most objects can also be accessed as properties of `self` 
 Object===self['Object']
 //true
 ```
-Additionally, `if` statements should usually be avoided; use ternary/conditional operators, boolean logic, math, and bitwise operations instead. For bitwise, `Number|0` is often used to round toward 0 (almost a complete replacement for `Math.round`).
+Additionally, `if` statements should usually be avoided; use ternary/conditional operators, boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward 0 (almost a complete replacement for `Math.round`).
 ```js
 if(a==3)a=0;
 a-3||(a=0);
