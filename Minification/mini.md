@@ -10,7 +10,7 @@
 //shortened
 (a,b,c,s=String,h='hasOwnProperty')=>a+b+c+s[h]()+s[h]();
 ```
-Property | Min | Examples
+Property | Min. | Examples
 -------- | ---- | --------
 `.1234567890+` | 2 | `.codePointAt`, `.charCodeAt`, etc.
 `.123456(789)` | 3 | `.replace`, `.length`
@@ -18,7 +18,7 @@ Property | Min | Examples
 `.1234` | 5 | `.join`, `.ceil`
 `.123` | 9 | `.map`
 
-Object | Min | Examples
+Object | Min. | Examples
 ------ | ---- | --------
 `123456+` | 2 | `String`, `Object`, `Math.ceil`, etc.
 `1234(5)` | 3 | `Math`, `Array`
