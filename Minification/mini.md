@@ -51,5 +51,5 @@ Reassignment for non-property-identifiers (e.g. `Object["identifier"]`) is the s
 # Managing RegExp
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
-`(.|\n)` or `[\s\S]` | Represent any character | `[^]`
+`(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
 # Minor Adjustments
