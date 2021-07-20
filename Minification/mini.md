@@ -44,11 +44,11 @@ Property | Minimum Uses
 `.1234` | 4
 `.123` | 7
 
+Reassignments for object (not property) references have the same range as with the default parameters. This also applies to destructuring.
 ```js
 (a,b='meaningless')=>a[b]+123456+123456;
 (a,b='meaningless')=>a[b]+(b=123456)+b;
 ```
-Reassignment for non-property-identifiers (e.g. `Object["identifier"]`) is the same as with the default parameters. This also applies to destructuring.
 # Managing RegExp
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
