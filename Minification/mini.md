@@ -53,3 +53,4 @@ Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
 # Minor Adjustments
+# Mixing with Optimization
