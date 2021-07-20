@@ -25,6 +25,11 @@ Object | Min. | Examples
 `123` | 4 | `URL`, `Set`, `Map`, `CSS`, `top`
 `12` | 6
 
+Do not forget that in standard browsers, most objects can also be accessed as properties of `self` or `window`. Although not nearly as efficient as usual, they can be used to access the global scope.
+```js
+Object===self['Object']
+//true
+```
 For shortening, destructuring should be used after combining at least **7** variables.
 ```js
 a='1',b='2',c='3',d='4',e='5',f='6',g='7'
