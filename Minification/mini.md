@@ -48,3 +48,4 @@ Property | Minimum Uses
 (a,b='meaningless')=>a[b]+(b=123456)+b;
 ```
 Reassignment for non-property-identifiers (e.g. `Object["identifier"]`) is the same as with the default parameters. This also applies to destructuring.
+# Managing RegExp
