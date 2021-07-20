@@ -38,6 +38,7 @@ a=a-4.5|0&&a;
 
 /*
 Order:
+0. (Parentheses)
 1. Logical NOT (!) and Bitwise NOT (~)
 2. Math (+,-,*,/,**,%)
 3. Bit shift (<<,>>)
