@@ -21,7 +21,7 @@ Property | Min. | Examples
 Object | Min. | Examples
 ------ | ---- | --------
 `123456+` | 2 | `String`, `Object`, `Math.ceil`, etc.
-`1234(5)` | 3 | `Math`, `Array`
+`1234(5)` | 3 | `Math`, `Array`, `self`
 `123` | 4
 `12` | 6
 
