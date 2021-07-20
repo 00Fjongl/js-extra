@@ -55,3 +55,4 @@ Common Usage | Function | Replacement
 # Minor Adjustments
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid RegExp. `.indexOf`, when paired with bracket notation, is the most optimal searching method.
+`.split`, as a replacement for arrays of strings, should also be avoided under those conditions.
