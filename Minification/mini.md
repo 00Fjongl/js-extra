@@ -48,10 +48,11 @@ Reassignments for object (not property) references have the same range as with t
 (a,b='meaningless')=>a[b]+123456+123456;
 (a,b='meaningless')=>a[b]+(b=123456)+b;
 ```
-# Managing RegExp
+# Utilizing RegExp
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
+`i='a'.repeat(420);for(e=0,a=[];e++<i.length/200;)a.push(i.slice((e-1)*200,e*200));a` | Split every 200 characters | `'a'.repeat(420).split(/(?<=^(?:[^]{200})+)/)`
 # Minor Adjustments
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid RegExp. `.indexOf`, when paired with bracket notation, is the most optimal searching method.
