@@ -49,3 +49,4 @@ Property | Minimum Uses
 ```
 Reassignment for non-property-identifiers (e.g. `Object["identifier"]`) is the same as with the default parameters. This also applies to destructuring.
 # Managing RegExp
+# Small Adjustments
