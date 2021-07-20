@@ -1,4 +1,4 @@
-### Standard JavaScript constraints for shortening properties or objects:
+### Standard JavaScript constraints for shortening property and object references:
 ## Via Default Parameters/Arguments
 ```js
 //example
