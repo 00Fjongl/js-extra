@@ -4,16 +4,37 @@ For minification, the ECMAScript 6 arrow functions are preferred over ECMAScript
 //ES5
 function name(a,b,c){return a+b+c}(1,2,3);
 //ES6
+self.name=(a,b,c)=>a+b+c;name(1,2,3);
+//or
 (self.name=(a,b,c)=>a+b+c)(1,2,3);
+
+//outermost layer as an anonymous function
+((a,b,c)=>a+b+c)(1,2,3);
 ```
-In standard browsers, objects can also be accessed as properties of `self` or `window`.
+In standard browsers, most objects can also be accessed as properties of `self` or `window`.
 ```js
 Object===self['Object']
 //true
 ```
-Additionally, `if` statements should usually be avoided; use ternary/conditional operators, boolean logic, and bitwise operations instead.
+Additionally, `if` statements should usually be avoided; use ternary/conditional operators, boolean logic, math, and bitwise operations instead.
 ```js
-if
+if(a==3)a=0;
+a-3||(a=0);
+//better
+a=a-3&&a;
+
+if(a==3){a=0}else{a=3}
+a=a-3&&3;
+
+if(a=='c'){a='b'}else{a='c'}
+a=a=='c'?'b':'c';
+
+if(a>3&&a<6)a=0;
+a>3&a<6&&(a=0);
+//even better
+a=a>3&a<6?0:a;
+a=a<4|a>5&&a;
+a=a-4.5|0&&a;
 ```
 Some switch statements may also be replaced with arrays.
 ```js
@@ -66,7 +87,7 @@ Property | Min. | Examples
 
 Object | Min. | Examples
 ------ | ---- | --------
-`123456+` | 2 | `String`, `Object`, `Math.ceil`
+`123456+` | 2 | `String`, `Function`, `Math.ceil`
 `1234(5)` | 3 | `Math`, `Array`, `self`
 `123` | 4 | `URL`, `Set`, `Map`, `CSS`, `top`
 `12` | 6
