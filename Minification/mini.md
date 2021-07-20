@@ -22,7 +22,7 @@ Object | Min. | Examples
 ------ | ---- | --------
 `123456+` | 2 | `String`, `Object`, `Math.ceil`, etc.
 `1234(5)` | 3 | `Math`, `Array`, `self`
-`123` | 4
+`123` | 4 | `URL`
 `12` | 6
 
 For shortening, destructuring should be used after combining at least **7** variables.
