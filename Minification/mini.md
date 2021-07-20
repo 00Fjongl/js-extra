@@ -54,3 +54,4 @@ Common Usage | Function | Replacement
 `(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
 # Minor Adjustments
 # Mixing with Optimization
+If a script needs to run thousands of times per minute, then avoid RegExp. `.indexOf`, when paired with an array, is the most optimal searching method.
