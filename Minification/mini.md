@@ -1,4 +1,48 @@
 # Basics
+For minification, the ECMAScript 6 arrow functions are preferred over ECMAScript 5 functions, unless a new scope is needed.
+```js
+//ES5
+function name(a,b,c){return a+b+c}(1,2,3);
+//ES6
+(self.name=(a,b,c)=>a+b+c)(1,2,3);
+```
+In standard browsers, objects can also be accessed as properties of `self` or `window`.
+```js
+Object===self['Object']
+//true
+```
+Additionally, `if` statements should usually be avoided; use ternary/conditional operators, boolean logic, and bitwise operations instead.
+```js
+if
+```
+Some switch statements may also be replaced with arrays.
+```js
+switch(){}
+```
+The grave accent, or backtick, can be used for both expression interpolation and function parsing.
+```js
+'A random number: '+Math.random()+'\nIs it a lucky one?'
+`A random number: ${Math.random()}\nIs it a lucky one?`
+//expression interpolation
+
+(a=>a.repeat(2))('Help me! ')
+(a=>a.repeat(2))`Help me! `
+//parsing function via tagged template
+
+//use with caution
+console.log('test')
+console.log`test`
+console.log((a=>a.split`|`)('te|st'))
+console.log((a=>a.split`|`)`te|st`)
+/*
+Logged list:
+
+"test"
+"test",raw:["test"]]
+["te","st"]
+Uncaught TypeError: a.split is not a function
+*/
+```
 ### Standard JavaScript constraints for shortening property and object references:
 ## Via Default Parameters/Arguments
 ```js
