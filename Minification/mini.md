@@ -38,16 +38,19 @@ a=a-4.5|0&&a;
 
 /*
 Order:
-0. (Parentheses)
-1. Chaining (.,?.)
-2. Unary (!,~,-) and Exponent (**)
-3. Addition and subraction (+,-)
+0. Left-hand assignment
+1. (Parentheses) and [Brackets]
+2. Chaining (.,?.)
+3. Unary (!,~,-) and Exponent (**)
 4. Multiplication, division, and remainder (*,/,%)
-5. Bit shift (<<,>>)
-6. Comparison (<,<=,>,>=,==,!=,===,!==)
-7. Bitwise (^,&,|)
-8. Logic (&&,||) and Nullish Coalescing (??)
-9. Ternary (condition?true:false)
+5. Addition and subraction (+,-)
+6. Bit shift (<<,>>)
+7. Comparison (<,<=,>,>=,==,!=,===,!==)
+8. Bitwise (^,&,|)
+9. Logic (&&,||) and Nullish Coalescing (??)
+10. Ternary (condition?true:false)
+11. Assignment
+12. Destructuring (...)
 */
 ```
 Some switch statements may also be replaced with arrays.
