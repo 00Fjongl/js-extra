@@ -39,7 +39,7 @@ console.log((a=>a.split`|`)`te|st`)
 Logged list:
 
 "test"
-"test",raw:["test"]]
+["test",raw:["test"]]
 ["te","st"]
 Uncaught TypeError: a.split is not a function
 */
