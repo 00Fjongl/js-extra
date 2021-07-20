@@ -44,7 +44,7 @@ Order:
 3. Addition and subraction (+,-)
 4. Multiplication, division, and remainder (*,/,%)
 5. Bit shift (<<,>>)
-6. Comparison (<,<=,>,>=)
+6. Comparison (<,<=,>,>=,==,!=,===,!==)
 7. Bitwise (^,&,|)
 8. Logic (&&,||)
 9. Ternary (condition?true:false)
