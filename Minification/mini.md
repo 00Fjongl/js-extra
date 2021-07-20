@@ -82,7 +82,7 @@ Logged list:
 Uncaught TypeError: a.split is not a function
 */
 ```
-### Standard JavaScript constraints for shortening property and object references:
+## Standard JavaScript constraints for shortening property and object references:
 ## Via Default Parameters/Arguments
 ```js
 //example
