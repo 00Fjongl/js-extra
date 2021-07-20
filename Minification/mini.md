@@ -52,7 +52,7 @@ Reassignments for object (not property) references have the same range as with t
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
-`for(i='example'.repeat(420),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a` | Split every 200 characters | `'example'.repeat(420).split(/(?<=^(?:[^]{200})+)/)`
+`for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a` | Split every 200 characters | `'long_example'.repeat(40).split(/(?<=^(?:[^]{200})+)/)`
 # Minor Adjustments
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid RegExp. `.indexOf`, when paired with bracket notation, is the most optimal searching method.
