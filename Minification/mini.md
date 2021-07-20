@@ -25,13 +25,6 @@ Object | Min. | Examples
 `123` | 4 | `URL`, `Set`, `Map`, `CSS`, `top`
 `12` | 6
 
-Do not forget that in standard browsers, most objects can also be accessed as properties of `self` and more. Although not nearly as efficient as usual, they can be used to access the global scope in strict mode.
-```js
-Object===self['Object']
-//true
-
-"use strict";globalThis.variable=Math.PI;
-```
 For shortening, destructuring should be used after combining at least **7** variables.
 ```js
 a='1',b='2',c='3',d='4',e='5',f='6',g='7'
