@@ -39,7 +39,7 @@ a=a-4.5|0&&a;
 /*
 Order:
 1. Logical NOT (!)
-2. Math (+,-,*,/,**)
+2. Math (+,-,*,/,**,%)
 3. Bit shift (<<,>>)
 3. Comparison (<,<=,>,>=)
 4. Bitwise (^,&,|)
