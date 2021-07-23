@@ -51,7 +51,7 @@ Reassignments for object (not property) references have the same range as with t
 # Frequent Mishaps
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
-`(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
+`/(.\|\n)/` or `/[\s\S]/` | Represent any character | `/[^]/`
 `!isFinite(c)?a():b()` | Execute `a` if not true, or `b` if true | `(isFinite(c)?b:a)()`
 
 ## Minor Adjustments
