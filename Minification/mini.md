@@ -64,7 +64,7 @@ isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
 ```
 The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases may interfere with its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Unused function arguments also serve as space.
 # Major Redesigns
-Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary for loop, or `Array.forEach`, `Array.map`, or a while loop. The `.split` function can even be used to split every 2,000 characters better than a for loop can:
+Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than a for loop can:
 ```js
 for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a;
 
