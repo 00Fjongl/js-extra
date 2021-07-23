@@ -52,7 +52,7 @@ Reassignments for object (not property) references have the same range as with t
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `(.\|\n)` or `[\s\S]` | Represent any character | `[^]`
-!isFinite(c)?a():b() | Execute `a` if true, or `b` if not | (isFinite(c)?b:a)()
+`!isFinite(c)?a():b()` | Execute `a` if true, or `b` if not | `(isFinite(c)?b:a)()`
 
 ## Minor Adjustments
 Ternary operators and arrow functions often need sets of parentheses in order to execute statements in groups. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they are the same size. This is because it creates a set of parentheses at no cost to size, and their singular return value can be abused.
