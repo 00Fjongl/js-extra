@@ -30,7 +30,7 @@ For shortening, destructuring should be used after combining at least **7** vari
 a='1',b='2',c='3',d='4',e='5',f='6',g='7'
 [a,b,c,d,e,f,g]='1,2,3,4,5,6,7'.split`,`
 ```
-Every additional variable included will save 2 bytes each, regardless of string length. This is important because **additional properties now follow the table for Variable Reassignment.**
+Every additional variable included will save 2 bytes each, regardless of string length. This is important because **additional properties will now follow the table for Variable Reassignment.**
 ## Via Variable Reassignment
 ```js
 (a,b='meaningless')=>a[b]+a.length+a.length+a.length;
@@ -53,6 +53,8 @@ Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `/(.\|\n)/` or `/[\s\S]/` | Represent any character | `/[^]/`
 `!isFinite(c)?a():b()` | Execute `a` if not true, or `b` if true | `(isFinite(c)?b:a)()`
+`undefined` | Return a false-y or nearly empty placeholder | `0[0]`
+`false` and `true` | Return a value that can be used for logic | `!1` or `0`, and `!0` or `1`
 
 ## Minor Adjustments
 Logic, ternary operators, and arrow functions often need sets of parentheses in order to execute statements in groups. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they are the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
@@ -70,6 +72,7 @@ for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a
 
 'long_example'.repeat(40).split(/(?<=^(?:[^]{200})+)/);
 ```
+A complete redesign of the entire system may occur if a better function or combination of methods appears.
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid RegExp. `.indexOf`, when paired with bracket notation, is the most optimal searching method.
 `.split`, as a replacement for arrays of strings, should also be avoided under those conditions. Extraneous return values from parentheses may cause slight amounts of lag. Turning arrays into strings, or one type to another results in some lag. This is apparent through tagged templates in place of string arguments.
