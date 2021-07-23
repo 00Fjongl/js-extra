@@ -57,10 +57,10 @@ Common Usage | Function | Replacement
 ## Minor Adjustments
 Logic, ternary operators, and arrow functions often need sets of parentheses in order to execute statements in groups. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they are the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
 ```js
-isFinite(c)&&(console.log('c is infinite'),isNaN(c)?b():a());
+isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
 
 //parentheses abused
-isFinite(c)&&(console.log('c is infinite'),isNaN(c)?b:a)();
+isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
 ```
 The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases may interfere with its return value. Beyond function returns and conditionals, the method is applicable to default parameters, passing arguments, and creating space to efficiently reassign variables. Unused function arguments also serve as space.
 # Major Redesigns
