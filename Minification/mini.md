@@ -53,7 +53,7 @@ Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `/(.\|\n)/` or `/[\s\S]/` | Represent any character | `/[^]/`
 `!isFinite(c)?a():b()` | Execute `a` if not true, or `b` if true | `(isFinite(c)?b:a)()`
-`undefined` | Return a false-y or nearly empty placeholder | `0[0]`
+`undefined` | Return a false-y or nearly empty placeholder | `0[0]` or `(statement).$` or `mangled_variable.$`
 `false` and `true` | Return a value that can be used for logic | `!1` or `0`, and `!0` or `1`
 
 ## Minor Adjustments
