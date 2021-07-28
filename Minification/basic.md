@@ -17,7 +17,8 @@ Object===self['Object']
 //true
 
 "use strict";globalThis.variable=Math.PI;
-```  
+```
+  
 `if` statements tend to be impractical; use ternary/conditional operators, boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward 0. It differs from `Math.floor` by rounding upward for negative integers, and reversing their sign after `2**31-1`.
 ```js
 if(a==3)a=0;
@@ -57,11 +58,13 @@ Order:
 12. Destructuring (...)
 */
 ```
+  
 Some switch statements may be replaced with arrays. 
 ```js
 switch(a){case'dog':a='cat';break;case'water':a='ice';break;default:a='dog'}
 a=['dog','cat','ice'][['dog','water'].indexOf(a)+1];
-```  
+```
+  
 The grave accent, or backtick, can be used for both expression interpolation and function parsing.
 ```js
 'A random number: '+Math.random()+'\nIs it a lucky one?'
