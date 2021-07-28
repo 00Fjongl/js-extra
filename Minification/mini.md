@@ -1,6 +1,10 @@
 ### Standard JavaScript constraints for **shortening** property and object references:
 ## Via Default Parameters/Arguments
 ```js
+Object.length;  //accessed property
+Object['length'];  //accessed via bracket notation
+l='length';Object[l];  //stored property
+
 //example
 (a,b,c)=>a+b+c+String.hasOwnProperty()+String.hasOwnProperty();
 //shortened object
