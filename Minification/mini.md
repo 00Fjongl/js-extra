@@ -6,14 +6,11 @@ Object['length'];  //via bracket notation
 l='length';Object[l];  //stored property name
 (l='length')=>Object[l];  //via default parameters
 
-//example
-(a,b,c)=>a+b+c+String.hasOwnProperty()+String.hasOwnProperty();
-//shortened object
-(a,b,c,s=String)=>a+b+c+s.hasOwnProperty()+s.hasOwnProperty();
-//shortened property
-(a,b,c,h='hasOwnProperty')=>a+b+c+String[h]()+String[h]();
-//shortened
-(a,b,c,s=String,h='hasOwnProperty')=>a+b+c+s[h]()+s[h]();
+
+(a,b,c)=>a+b+c+String.hasOwnProperty()+String.hasOwnProperty();  //example to shorten
+(a,b,c,s=String)=>a+b+c+s.hasOwnProperty()+s.hasOwnProperty();  //object
+(a,b,c,h='hasOwnProperty')=>a+b+c+String[h]()+String[h]();     //property
+(a,b,c,s=String,h='hasOwnProperty')=>a+b+c+s[h]()+s[h]();     //both
 ```
 Property | Minimum Uses | Examples
 -------- | ---- | --------
