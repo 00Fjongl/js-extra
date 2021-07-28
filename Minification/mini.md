@@ -74,5 +74,5 @@ for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a
 ```
 A complete redesign of the entire system may occur if a better function or combination of methods appears.
 # Mixing with Optimization
-If a script needs to run thousands of times per minute, then avoid RegExp. `.indexOf`, when paired with bracket notation, is the most optimal searching method.
-`.split`, as a replacement for arrays of strings, should also be avoided under those conditions. Extraneous return values from parentheses may cause slight amounts of lag. Turning arrays into strings, or one type to another results in some lag. This is apparent through tagged templates in place of string arguments.
+If a script needs to run thousands of times per minute, then avoid the use of RegExp. `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.).  
+`.split`, as a replacement for arrays of strings, should also be avoided under those conditions. Unnecessary parentheses create more return values, which may cause slight amounts of lag. Turning numbers into strings, or from one type to another, results in some lag. This is apparent through tagged templates in place of strings, for arguments.
