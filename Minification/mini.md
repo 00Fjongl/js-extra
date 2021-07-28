@@ -2,8 +2,8 @@
 ## Via Default Parameters/Arguments
 ```js
 Object.length;  //accessed property
-Object['length'];  //accessed via bracket notation
-l='length';Object[l];  //stored property
+Object['length'];  //via bracket notation
+l='length';Object[l];  //stored property name
 
 //example
 (a,b,c)=>a+b+c+String.hasOwnProperty()+String.hasOwnProperty();
