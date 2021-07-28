@@ -10,7 +10,7 @@
 //shortened
 (a,b,c,s=String,h='hasOwnProperty')=>a+b+c+s[h]()+s[h]();
 ```
-Property | Min. | Examples
+Property | Minimum Uses | Examples
 -------- | ---- | --------
 `.1234567890+` | 2 | `.codePointAt`, `.charCodeAt`
 `.123456(789)` | 3 | `.replace`, `.length`, `.filter`
@@ -36,7 +36,8 @@ Every additional variable included will save 2 bytes each, regardless of string 
 (a,b='meaningless')=>a[b]+a.length+a.length+a.length;
 (a,b='meaningless')=>a[b]+a[b='length']+a[b]+a[b];
 ```
-Property | Minimum Uses
+Variables are reassigned, or reused, to avoid creating new variables.
+Property | Min.
 -------- | ------------
 `.12345678+` | 2
 `.12345(67)` | 3
