@@ -31,7 +31,7 @@ a=a-3&&3;
 if(a=='c'){a='b'}else{a='c'}
 a=a=='c'?'b':'c';
 ```
-Bitwise operators `&` and `|` can perform similarly to `&&` and `||`, under much stricter circumstances. Unlike logical operators, functions and assignments will run regardless. Avoid combining bitwise statements (and sometimes numbers other than `1` or `0`) if they are to serve as consistent booleans. Bitwise also negates decimals.
+Bitwise operators `&` and `|` can perform similarly to `&&` and `||`, under much stricter circumstances. Unlike logical operators, functions and assignments will run regardless. Avoid either combining bitwise statements, or numbers other than `1` or `0`, if they are to serve as consistent booleans. Bitwise also negates decimals.
 ```js
 if(a>3&&a<6)a=0;
 a>3&a<6&&(a=0);
