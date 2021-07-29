@@ -1,5 +1,5 @@
 ### Things to Avoid
-Aside from reducing access to the HTML DOM and the number of statements within a loop, there are a number of other mistakes to avoid.  
+Aside from reducing access to the HTML DOM and the number of statements within a loop, there are a number of notable mistakes to avoid. These may conflict with certain minification methods.  
   
 Whenever a variable is assigned, some memory is siphoned off and allocated to it. The time required for memory allocation should roughly scale with the size of the object. Assigning multiple values to variables may reduce execution speed.  
   
