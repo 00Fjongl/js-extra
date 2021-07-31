@@ -48,7 +48,7 @@ Order:
 3. Unary (!,~,-) and exponent (**)
 4. Multiplication, division, and remainder (*,/,%)
 5. Addition and subraction (+,-)
-6. Bit shift (<<,>>)
+6. Bit shift (<<,>>,>>>)
 7. Comparison (<,<=,>,>=,==,!=,===,!==)
 8. Bitwise AND (&) and bitwise XOR (^)
 9. Bitwise OR (|)
