@@ -70,8 +70,8 @@ The grave accent, or backtick, can be used for both expression interpolation and
 `A random number: ${Math.random()}\nIs it a lucky one?`
 //expression interpolation
 
-(a=>a.repeat(2))('Help me! ')
-(a=>a.repeat(2))`Help me! `
+(a=>a+a)('Help me! ')
+(a=>a+a)`Help me! `
 //parsing function via tagged template
 
 
