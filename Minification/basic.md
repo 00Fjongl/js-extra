@@ -50,11 +50,12 @@ Order:
 5. Addition and subraction (+,-)
 6. Bit shift (<<,>>)
 7. Comparison (<,<=,>,>=,==,!=,===,!==)
-8. Bitwise (^,&,|)
-9. Logic (&&,||) and Nullish Coalescing (??)
-10. Ternary (condition?true:false)
-11. Assignment
-12. Destructuring (...)
+8. Bitwise XOR (^) and Bitwise AND(&)
+9. Bitwise OR (|)
+10. Logic (&&,||) and Nullish Coalescing (??)
+11. Ternary (condition?true:false)
+12. Assignment
+13. Destructuring (...)
 */
 ```
 Some switch statements may be replaced with arrays:
