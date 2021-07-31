@@ -43,19 +43,20 @@ a=a-4.5|0&&a;
 /*
 Order:
 0. Left-hand assignment
-1. (Parentheses) and [Brackets]
-2. Chaining (.,?.)
-3. Unary (!,~,-) and Exponent (**)
+1. (Parentheses) and [brackets]
+2. Chaining (.,?.,a[a]) and calling (a(),a``)
+3. Unary (!,~,-) and exponent (**)
 4. Multiplication, division, and remainder (*,/,%)
 5. Addition and subraction (+,-)
 6. Bit shift (<<,>>)
 7. Comparison (<,<=,>,>=,==,!=,===,!==)
-8. Bitwise AND (&) and Bitwise XOR (^)
+8. Bitwise AND (&) and bitwise XOR (^)
 9. Bitwise OR (|)
-10. Logic (&&,||) and Nullish Coalescing (??)
+10. Logic (&&,||) and nullish coalescing (??)
 11. Ternary (condition?true:false)
 12. Assignment
 13. Destructuring (...)
+14. Comma (,)
 */
 ```
 Some switch statements may be replaced with arrays:
