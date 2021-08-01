@@ -82,6 +82,7 @@ Math.random()*2|!setTimeout(console.log,5e3,'test');
   
 Is a value inconsistent? Is it causing issues with logic? Use `!value`, `!!value`, `[value]`, or `![value]` when in a pinch!
 ```js
+self.onkeydown=e=>(e.keyCode-43?onkeydown=console.log(e.key)||e=>e:alert`Press the correct key.`,!1);
 self.onkeydown=e=>![e.keyCode-43?onkeydown=console.log(e.key)||e=>e:alert`Press the correct key.`];
 ```
 # Major Redesigns
