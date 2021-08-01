@@ -33,8 +33,8 @@ a=a=='c'?'b':'c';
 ```
 If the return value is irrelevant, ternary operators can occasionally be used to minify even further.
 ```js
-a!=3&&(b+=a);
-a^3?b+=a:0;
+a+''&&(b+=a);
+a+''?b+=a:0;
 //not better
 b=a^3?b+a:b;
 ```
