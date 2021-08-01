@@ -90,14 +90,14 @@ A complete redesign of the entire system may occur if a better function or combi
   
 Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed dips when called often. As mentioned before, they can be modified to call themselves, and replace finite loops.
 ```js
-for(e=0;e<256;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<256;e++)[d[b],d[c]]=[d[c],d[b]];
+for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[b]];
 
 //grouped
-(f=(a,e=0)=>e++<256?f(a,e,[a[b],a[c]]=[a[c],a[b]]):f)(a)(d);
+(f=(a,e=0)=>e++<255?f(a,e,[a[b],a[c]]=[a[c],a[b]]):f)(a)(d);
 //better
-(f=a=>{for(e=0;e++<256;)[a[b],a[c]]=[a[c],a[b]]})(a);f(d);
+(f=a=>{for(e=0;e++<255;)[a[b],a[c]]=[a[c],a[b]]})(a);f(d);
 //not better
-for(e=0;e++<256;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
+for(e=0;e++<255;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
 ```
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid the use of RegExp. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
