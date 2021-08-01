@@ -106,7 +106,7 @@ for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[
 for(e=0;e++<255;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
 ```
 # Mixing with Optimization
-If a script needs to run thousands of times per minute, then avoid the use of RegExp, and avoid any function grouping minification. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
+If a script needs to run thousands of times per minute, then avoid the use of RegExp, and avoid any function group minifying. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
   
 `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.). `.includes` is only the fastest when used with arrays.  
   
