@@ -84,8 +84,8 @@ Math.random()*2|!setTimeout(console.log,5e3,'test');
   
 Is a value inconsistent? Is it causing issues with logic? Use `!value`, `!!value`, `[value]`, or `![value]` when in a pinch!
 ```js
-self.onkeydown=e=>(e.keyCode-43?onkeydown=console.log(e.key)||e=>e:alert`Press the correct key.`,!1);
-self.onkeydown=e=>![e.keyCode-43?onkeydown=console.log(e.key)||e=>e:alert`Press the correct key.`];
+self.onkeydown=e=>(e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)||e=>e,!1);
+self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)||e=>e];
 ```
 # Major Redesigns
 Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
