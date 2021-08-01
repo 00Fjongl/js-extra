@@ -106,8 +106,8 @@ for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[
 for(e=0;e++<255;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
 ```
 # Mixing with Optimization
-If a script needs to run thousands of times per minute, then avoid the use of RegExp. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
+If a script needs to run thousands of times per minute, then avoid the use of RegExp, and avoid any function grouping minification. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
 `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.). `.includes` is only the fastest when used with arrays.  
   
 Unnecessary parentheses create more return values, which may cause slight amounts of lag. Turning arrays into strings, or from one type to another, results in some lag. This is apparent through tagged templates in place of strings, for arguments.  
-Properties accessed through bracket notation leave minimal differences in performance, even if the string is replaced by a variable.
+Properties accessed through bracket notation leave minimal differences in performance, even if the string is replaced by a variable. However, large variable assignments will consume memory.  
