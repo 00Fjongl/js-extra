@@ -59,7 +59,7 @@ Common Usage | Function | Replacement
 `undefined` | Return a false-y or nearly empty placeholder | `0[0]` or `(statement).$` or `mangled_variable.$`
 `false` and `true` | Return a value that can be used for logic | `!1` or `0`, and `!0` or `1`
 `['a','b','c'][2]` | Return a character from a list | `'abc'[2]`
-`Math.floor(a/2)-a/2` or `(a/2\|0)-a/2` | Check for an even number | `a%2`
+`(a/2\|0)-a/2` | Check for an even number | `a%2`
 `Math.random()*2\|0` | Randomly return truthy or falsey values | `Math.random()<.5`
 
 ## Minor Adjustments
