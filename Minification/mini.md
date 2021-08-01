@@ -70,11 +70,15 @@ isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
 ```
 The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases may interfere with its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Unused function arguments also serve as space.  
   
+### Synonymous Code
+Unfortunately, some pieces of code have optimizations so situational that the challenge is in recognizing it, rather than developing a method. While this may feature some more applicable techniques, not all of them will be covered. Further minification may involve identifying niche "synonyms."  
+  
 Functions such as `setTimeout` and `Array.prototype.push` return varying integers. As they cannot return `0`, any logic that happens to include them may be shortened.
 ```js
 Math.random()*2|0&setTimeout(console.log,5e3,'test');
 Math.random()*2|!setTimeout(console.log,5e3,'test');
 ```
+`**0` and all bitwise operators will parse `NaN` (or `undefined`, etc.) as `0`. Operations that deal with numbers are commonplace in minification. As such, taking note of those operators should reduce bugs and potential length.
 # Major Redesigns
 Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
@@ -82,7 +86,19 @@ for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a
 
 'long_example'.repeat(40).split(/(?<=^(?:[^]{200})+)/);
 ```
-A complete redesign of the entire system may occur if a better function or combination of methods appears.
+A complete redesign of the entire system may occur if a better function or combination of methods appears.  
+  
+Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed dips when called often. As mentioned before, they can be modified to call themselves, and replace finite loops.
+```js
+for(e=0;e<256;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<256;e++)[d[b],d[c]]=[d[c],d[b]];
+
+//grouped
+(f=(a,e=0)=>e++<256?f(a,e,[a[b],a[c]]=[a[c],a[b]]):f)(a)(d);
+//better
+(f=a=>{for(e=0;e++<256;)[a[b],a[c]]=[a[c],a[b]]})(a);f(d);
+//not better
+for(e=0;e++<256;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
+```
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid the use of RegExp. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
 `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.). `.includes` is only the fastest when used with arrays.  
