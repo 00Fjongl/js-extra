@@ -31,6 +31,13 @@ a=a-3&&3;
 if(a=='c'){a='b'}else{a='c'}
 a=a=='c'?'b':'c';
 ```
+If the return value is irrelevant, ternary operators can occasionally skip the need for some parentheses.
+```js
+a!=3&&(b+=a);
+a^3?b+=a:0;
+//not better
+b=a^3?b+a:b;
+```
 Bitwise operators `&` and `|` can perform similarly to `&&` and `||`, under much stricter circumstances. Unlike logical operators, functions and assignments will run regardless. Avoid either combining bitwise statements, or numbers other than `1` or `0`, if they are to serve as consistent booleans. Bitwise also negates decimals.
 ```js
 if(a>3&&a<6)a=0;
