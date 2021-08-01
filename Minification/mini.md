@@ -78,7 +78,7 @@ Functions such as `setTimeout` and `Array.prototype.push` return varying integer
 Math.random()*2|0&setTimeout(console.log,5e3,'test');
 Math.random()*2|!setTimeout(console.log,5e3,'test');
 ```
-`**0` and all bitwise operators will parse `NaN` (or `undefined`, etc.) as `0`. Operations that deal with numbers are commonplace in minification. As such, taking note of those operators should reduce bugs and potential length.
+`**0` and all bitwise operators will parse `NaN` (or `undefined`, etc.) as `0`. This results in a difference when using `a==3`, `a-3`, or `a^3` for a condition. Operations that deal with numbers are commonplace in minification. As such, taking note of those operators should reduce bugs and potential length.
 # Major Redesigns
 Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
