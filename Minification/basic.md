@@ -35,6 +35,9 @@ If the return value is irrelevant, ternary operators can occasionally be used to
 ```js
 a+''&&(b+=a);
 a+''?b+=a:0;
+
+b=console.log(b.value)||(a=>b=a);
+b=console.log(b.value)?0:a=>b=a;
 ```
 Bitwise operators `&` and `|` can perform similarly to `&&` and `||`, under much stricter circumstances. Unlike logical operators, functions and assignments will run regardless. Avoid either combining bitwise statements, or numbers other than `1` or `0`, if they are to serve as consistent booleans. Bitwise also negates decimals.
 ```js
