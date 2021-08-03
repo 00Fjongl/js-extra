@@ -70,7 +70,7 @@ isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
 //parentheses abused
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
 ```
-The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases may interfere with its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Unused function arguments also serve as space.  
+The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases may interfere with its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Expression interpolation and unused function arguments also serve as space.  
   
 ### Synonymous Code
 Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognizing it, rather than developing a method. While some of the more applicable techniques are shared, not all can be covered. Further minification may involve locating niche "synonyms."  
