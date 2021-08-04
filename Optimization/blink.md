@@ -8,4 +8,6 @@ While the difference is not extreme, they should be avoided if they do not save 
   
 Tagged templates, on the other hand, have proven to be a significantly slower replacement for strings. For optimization, they should only be used if the `raw` property or interpolated expression arguments are needed.  
   
-Regular expressions tend to be slower than several of the other search functions combined, as they are created as objects. They can replace large groups of `.indexOf` and other search methods, but should not see frequent usage.
+Regular expressions tend to be slower than several of the other search functions combined, as they are created as objects. They can replace large groups of `.indexOf` and other search methods, but should not see frequent usage.  
+  
+Self-invoking functions lead to memory leaks, and will exceed the call stack limit in extreme cases. If they do not finish promptly, steer away from them. For loops, while loops, and `.forEach` loops have more reliable use cases. 
