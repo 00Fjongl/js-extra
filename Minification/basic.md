@@ -31,8 +31,8 @@ a=a-3&&3;
 if(a=='c'){a='b'}else{a='c'}
 a=a=='c'?'b':'c';
 
-Math.round(5.76);
-5.76+.5|0;
+a=Math.round(5.76);
+a=5.76+.5|0;
 ```
 If the return value is irrelevant, ternary operators can occasionally be used to minify even further.
 ```js
