@@ -5,3 +5,4 @@ Mixing via attributes introduces the incentive of designing the code in a way th
 Standard | Substitute
 ------ | ----------
 `document.documentElement` | `document.all[0]`
+`<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA style=display:none onload=alert()>` | `<img src style=display:none onerror=alert()>`
