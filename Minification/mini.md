@@ -107,6 +107,12 @@ for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[
 //not better
 for(e=0;e++<255;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
 ```
+Some switch statements may not be substituted with arrays. The more obnoxious switch statements can be replaced with ternary operators.
+```js
+switch(a){case'dog':test1();break;case'water':test2();break;default:test3()}
+//easy to continue
+(a=>a?--a?test2():test1():test3())(['dog','water'].indexOf(a)+1)
+```
 # Mixing with Optimization
 If a script needs to run thousands of times per minute, then avoid the use of RegExp, and avoid any function-group-minifying. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
   
