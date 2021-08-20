@@ -18,6 +18,6 @@ console.log((['first','second'][file.charCodeAt()-97]||'third')+'.html')
 
 //rename files to A.html, B.html, and C.html
 console.log('CAB'['ab'.indexOf(file)+1]+'.html')
-//rename queries to A, B, and C
+//also rename queries to A, B, and C
 console.log((file||'C')+'.html')
 ```
