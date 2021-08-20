@@ -107,7 +107,7 @@ for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[
 //not better
 for(e=0;e++<255;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
 ```
-Some switch statements may not be substituted with arrays. The more obnoxious switch statements can be replaced with ternary operators.
+Some switch statements may not be substituted with arrays. Chains of ternary operators can handle the more obnoxious switch statements.
 ```js
 switch(a){case'dog':test1();break;case'water':test2();break;default:test3()}
 //easy to continue
