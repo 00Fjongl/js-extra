@@ -6,7 +6,7 @@ Standard | Substitute
 ------ | ----------
 `document.documentElement` | `document.all[0]`
 `<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA style=display:none onload=alert()>` | `<img src style=display:none onerror=alert()>`
-## Filenames
+# Filenames
 Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
 ```js
 //basic querystring system
