@@ -77,9 +77,9 @@ a=['dog','cat','ice'][['dog','water'].indexOf(a)+1];
 ```
 Other switch statements may not be substituted with arrays. Chains of ternary operators can handle the more obnoxious switch statements.
 ```js
-switch(a){case'dog':test1();break;case'water':test2();break;default:test3()}
+switch(a){case'dog':delete a;break;case'water':test1();break;default:test2()}
 //easy to continue
-(a=>a?--a?test2:test1:test3)(['dog','water'].indexOf(a)+1)()
+(a=>a?--a?test1:delete a:test2)(['dog','water'].indexOf(a)+1)
 ```
 The grave accent, or backtick, can be used for both expression interpolation and function parsing:
 ```js
