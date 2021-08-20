@@ -79,7 +79,7 @@ Other switch statements may not be substituted with arrays. Chains of ternary op
 ```js
 switch(a){case'dog':delete a;break;case'water':test1();break;default:test2()}
 //easy to continue
-(a=>a?--a?test1:delete a:test2)(['dog','water'].indexOf(a)+1)
+(a=>a?--a?test1():delete a:test2())(['dog','water'].indexOf(a)+1)
 ```
 The grave accent, or backtick, can be used for both expression interpolation and function parsing:
 ```js
