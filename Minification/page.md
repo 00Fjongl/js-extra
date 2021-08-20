@@ -9,10 +9,12 @@ Standard | Substitute
 ## Filenames
 Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
 ```js
-//basic
+//basic querystring system
 switch(file){case'a':console.log('first.html');break;case'b':console.log('second.html');break;default:console.log('third.html')}
 //regular minification
 console.log(['third','first','second']['ab'.indexOf(file)+1]+'.html')
+//specific and for many files
+console.log((['first','second'][file.charCodeAt()-97]||'third')+'.html')
 
 //rename files to A.html, B.html, and C.html
 console.log('CAB'['ab'.indexOf(file)+1]+'.html')
