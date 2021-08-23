@@ -111,7 +111,7 @@ With the tagged templates, arrays of strings can be replaced with the split func
 ['1','2','3','4','5']
 '1,2,3,4,5'.split`,`
 
-//numbers can be used too
+//numbers can be used too, and are significantly faster
 ['ab','cd','ef','gh','ij']
 'ab0cd0ef0gh0ij'.split(0)
 ```
