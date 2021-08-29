@@ -57,7 +57,7 @@ Common Usage | Function | Replacement
 `/(.\|\n)/` or `/[\s\S]/` | Represent any character | `/[^]/`
 `!isFinite(c)?a():b()` | Execute `a` if not true, or `b` if true | `(isFinite(c)?b:a)()`
 `a>=b?c():d()` | Execute `c` if `a` is greater than or equal to `b`, or `d` if not | `a<b?d():c()`
-`undefined` | Return a nearly empty placeholder | `0[0]` or `(statement).$` or `mangled_variable.$`
+`undefined` | Return a nearly empty placeholder | `0[0]` or `0[statement]` or `function().$` or `mangled_variable.$`
 `false` and `true` | Return a value that can be used for logic | `!1` or `0`, and `!0` or `1`
 `['a','b','c'][2]` | Return a character from a list | `'abc'[2]`
 `(a/2\|0)-a/2` | Check for an even number | `a%2`
