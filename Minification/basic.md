@@ -53,7 +53,7 @@ a=a-4.5|0&&a;
 
 /*
 Order:
-0. Left-hand expression
+0. Left-hand assignment or expression
 1. (Parentheses) and [brackets]
 2. Chaining (.,?.,a[a]) and calling (a(),a``)
 3. Postfix (a++,a--,++a,--a), unary (!,~,+,-) and exponent (**)
