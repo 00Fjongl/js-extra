@@ -56,7 +56,7 @@ Order:
 0. Left-hand assignment or expression
 1. (Parentheses) and [brackets]
 2. Chaining (.,?.,a[a]) and calling (a(),a``)
-3. Postfix (a++,a--,++a,--a), unary (!,~,+,-) and exponent (**)
+3. Postfix (a++,a--), prefix (++a,--a), unary (!,~,+,-) and exponent (**)
 4. Multiplication, division, and remainder (*,/,%)
 5. Addition and subraction (+,-)
 6. Bit shift (<<,>>,>>>)
