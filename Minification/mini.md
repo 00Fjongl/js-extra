@@ -40,7 +40,7 @@ Every additional variable included will save 2 bytes each, regardless of string 
 ```
 Variables are reassigned, or reused, to avoid creating new ones.
 Property | Min.
--------- | ------------
+-------- | ----
 `.12345678+` | 2
 `.12345(67)` | 3
 `.1234` | 4
