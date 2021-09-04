@@ -38,7 +38,7 @@ Every additional variable included will save 2 bytes each, regardless of string 
 (a,b='meaningless')=>a[b]+a.length+a.length+a.length;
 (a,b='meaningless')=>a[b]+a[b='length']+a[b]+a[b];
 ```
-Variables are reassigned, or reused, to avoid creating new ones.
+Variables are reassigned, or reused, to avoid creating new ones.  
 Property | Min.
 -------- | ----
 `.12345678+` | 2
