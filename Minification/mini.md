@@ -101,7 +101,7 @@ There may be cases where the RegExp function should be used over the RegExp lite
 'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
 'long_example'.repeat(4e20).split(RegExp`(?<=^(?:[^]{3e18})+)`);
 ```
-A complete redesign of the entire system may occur if a better function or combination of methods appears.  
+A complete redesign of the entire system may occur if a better function or combination of methods appears. They may be time-consuming, so they should be done thoroughly on the first try.  
   
 Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. As mentioned before, they can be modified to call themselves, and even replace finite loops.
 ```js
