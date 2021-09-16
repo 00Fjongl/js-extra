@@ -90,20 +90,20 @@ self.onkeydown=e=>(e.keyCode-43?alert`Press the correct key.`:onkeydown=console.
 self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)?0:e=>e];
 ```
 # Major Redesigns
-Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
+Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
 for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
 'long_example'.repeat(400).split(/(?<=^(?:[^]{2000})+)/);
 ```
-There may be cases where the RegExp function should be used over the RegExp literals, such as when a variable or shortened integer needs to be parsed.
+In RegExp, certain cases, such as when an identifier or primitive must be parsed, should be handled with the `RegExp()` function itself.
 ```js
 'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
 'long_example'.repeat(4e20).split(RegExp`(?<=^(?:[^]{3e18})+)`);
 ```
 A complete redesign of the entire system may occur if a better function or combination of methods appears. They may be time-consuming, so they should be done thoroughly on the first try.  
   
-Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. As mentioned before, they can be modified to call themselves, and even replace finite loops.
+Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. These can be modified to call themselves, and even replace finite loops.
 ```js
 for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[b]];
 
