@@ -92,9 +92,9 @@ self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console
 # Major Redesigns
 Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may serve as a shorter alternative to a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
-for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=200));a;
+for(i='long_example'.repeat(40),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
-'long_example'.repeat(40).split(/(?<=^(?:[^]{200})+)/);
+'long_example'.repeat(40).split(/(?<=^(?:[^]{2000})+)/);
 ```
 A complete redesign of the entire system may occur if a better function or combination of methods appears.  
   
