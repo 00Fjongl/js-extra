@@ -99,7 +99,7 @@ for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));
 In RegExp, certain cases, such as when an identifier or primitive must be parsed, should be handled with the `RegExp()` function itself.
 ```js
 'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
-'long_example'.repeat(4e20).split(RegExp`(?<=^(?:[^]{3e18})+)`);
+'long_example'.repeat(4e20).split(RegExp(`(?<=^(?:[^]{${3e18}})+)`));
 ```
 A complete redesign of the entire system may occur if a better function or combination of methods appears. They may be time-consuming, so they should be done thoroughly on the first try.  
   
