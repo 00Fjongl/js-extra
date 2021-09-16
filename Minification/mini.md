@@ -96,13 +96,13 @@ for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));
 
 'long_example'.repeat(400).split(/(?<=^(?:[^]{2000})+)/);
 ```
-A complete redesign of the entire system may occur if a better function or combination of methods appears.  
-  
 There may be cases where the RegExp function should be used over the RegExp literals, such as when a variable or shortened integer needs to be parsed.
 ```js
 'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
 'long_example'.repeat(4e20).split(RegExp`(?<=^(?:[^]{3e18})+)`);
 ```
+A complete redesign of the entire system may occur if a better function or combination of methods appears.  
+  
 Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. As mentioned before, they can be modified to call themselves, and even replace finite loops.
 ```js
 for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[b]];
