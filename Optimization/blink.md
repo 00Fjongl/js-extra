@@ -10,6 +10,6 @@ Tagged templates, on the other hand, have proven to be a significantly slower re
   
 Regular expressions tend to be slower than several of the other search functions combined, as they are created as objects. They can replace large groups of `.indexOf` and other search methods, but should not see frequent usage.  
   
-Self-invoking functions lead to memory leaks, and will exceed the call stack limit in extreme cases. If they do not finish promptly, steer away from them. For loops, while loops, and `.forEach` loops have more reliable use cases. Self-invoking functions tend to be slowest, whereas `.forEach` tends to be fastest.  
+Self-invoking functions lead to memory leaks, and will exceed the call stack limit in extreme cases. If they do not finish promptly, steer away from them. `for` loops, `while` loops, and `.forEach` loops have more reliable use cases. Self-invoking functions tend to be slowest, whereas a `while` loop tends to be fastest.  
   
 Division and remainder operators are noticeably slower than other operators. Instead of using something like `a/b<b`, use `a<b*b`.
