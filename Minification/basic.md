@@ -1,5 +1,5 @@
 # Basics
-For minification, the ECMAScript 6 arrow functions are preferred over ECMAScript 5 functions, unless a new scope is needed.
+For minification, arrow functions (ECMAScript 6) are preferred over traditional functions (ECMAScript 5), unless a new scope is needed.
 ```js
 //ES5
 function name(a,b,c){return a+b+c}(1,2,3);
@@ -11,9 +11,9 @@ self.name=(a,b,c)=>a+b+c;name(1,2,3);
 //outermost layer as an anonymous function
 ((a,b,c)=>a+b+c)(1,2,3);
 ```
-Do not forget that in standard browsers, most objects can also be accessed as properties of `self` or `window`. Although not nearly as efficient as storing objects themselves, they can also be used to access the global scope in strict mode:
+Do not forget that in standard browsers, most objects can also be accessed as properties of `self` or `window`. Although not as efficient as storing objects themselves, one can also use them to access the global scope in strict mode:
 ```js
-Object===self['Object']
+Object===self['Object'];
 //true
 
 "use strict";globalThis.variable=Math.PI;
@@ -34,7 +34,7 @@ a=a=='c'?'b':'c';
 a=Math.round(5.76);
 a=5.76+.5|0;
 ```
-If the return value is irrelevant, ternary operators can occasionally be used to minify even further.
+If the return value is irrelevant, ternary operators can minify even further in specific situations.
 ```js
 a+''&&(b+=a);
 a+''?b+=a:0;
@@ -70,15 +70,17 @@ Order:
 14. Comma (,)
 */
 ```
-Some switch statements may be replaced with arrays:
+Some switch statements may be substituted with arrays:
 ```js
 switch(a){case'dog':a='cat';break;case'water':a='ice';break;default:a='dog'}
 a=['dog','cat','ice'][['dog','water'].indexOf(a)+1];
 ```
-Other switch statements may not be substituted with arrays. Chains of ternary operators can handle the more obnoxious switch statements.
+Other switch statements cannot be replaced by arrays. Chains of ternary operators can handle the more obnoxious switch statements.
 ```js
 switch(a){case'dog':delete a;break;case'water':test1();break;case'ice':a=test2;break;default:test2()}
+
 //easy to continue
+//turn the condition into a number, and change with ++ or --
 (b=>b--?b--?b?a=test2:test1():delete a:test2())(['dog','water','ice'].indexOf(a)+1)
 ```
 The grave accent, or backtick, can be used for both expression interpolation and function parsing:
