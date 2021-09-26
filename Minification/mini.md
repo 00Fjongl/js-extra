@@ -91,7 +91,7 @@ Functions such as `setTimeout` and `Array.prototype.push` return varying integer
 Math.random()*2|0&setTimeout(console.log,5e3,'test');
 Math.random()*2|!setTimeout(console.log,5e3,'test');
 ```
-`**0` and all bitwise operators will parse `NaN` (or `undefined`, `'abc'`, etc.) as `0`. This results in a difference when using `a!=3`, `a-3`, or `a^3` for a condition. Operations that deal with numbers are commonplace in minification. As such, taking note of those operators should reduce bugs and potential length.  
+`**0` and all bitwise operators will parse `NaN` (or `undefined`, `'abc'`, etc.) as `0`. This results in a difference when using `a!=3`, `a-3`, or `a^3` for a condition. Operations that deal with numbers are commonplace in minification. As such, these operators may reduce bugs and overall code size when used.  
   
 Is a value inconsistent? Is it causing issues with logic? Use `!value`, `!!value`, `[value]`, or `![value]` when in a pinch!
 ```js
