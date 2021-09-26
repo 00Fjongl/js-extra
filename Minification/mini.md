@@ -65,17 +65,17 @@ Common Usage | Function | Replacement
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
 
 ## Minor Adjustments
-Logic, ternary operators, and arrow functions often need sets of parentheses in order to execute statements in groups. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they are the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
+Logic, ternary operators, and arrow functions tend to use parentheses to run groups of statements. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they are the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
 ```js
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
 
 //parentheses abused
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
 ```
-The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases may interfere with its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Expression interpolation and unused function arguments also serve as space.  
+The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases will disrupt its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Expression interpolation and unused function arguments can also behave this way.  
   
 ### Synonymous Code
-Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognizing it, rather than developing a method. While some of the more applicable techniques are shared, not all can be covered. Further minification may involve locating niche "synonyms."  
+Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognition, rather than revision. While some less uncommon, more applicable techniques are shared, not all are covered. Further revisions may involve locating niche "synonyms."  
   
 Consider some of the shorthand assignment operators. They can be applied to many scenarios, if approached creatively.  
 ```js
@@ -86,12 +86,12 @@ a=null,c=a&=b=256;
 a=(a+(b=c))%256;
 a=(a+=b=c)%256;
 ```
-Functions such as `setTimeout` and `Array.prototype.push` return varying integers. As they cannot return `0`, any logic that happens to include them may be shortened.
+While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
 Math.random()*2|0&setTimeout(console.log,5e3,'test');
 Math.random()*2|!setTimeout(console.log,5e3,'test');
 ```
-`**0` and all bitwise operators will parse `NaN` (or `undefined`, `'abc'`, etc.) as `0`. This results in a difference when using `a!=3`, `a-3`, or `a^3` for a condition. Operations that deal with numbers are commonplace in minification. As such, these operators may reduce bugs and overall code size when used.  
+`**0` and all bitwise operators will parse `NaN` (or `undefined`, `'abc'`, etc.) as `0`. Consequently, there are differences between `a!=3`, `a-3`, and `a^3` as conditions. Numerical operations are commonplace in minification. As such, these operators may reduce bugs and overall code size when examined.  
   
 Is a value inconsistent? Is it causing issues with logic? Use `!value`, `!!value`, `[value]`, or `![value]` when in a pinch!
 ```js
@@ -99,7 +99,7 @@ self.onkeydown=e=>(e.keyCode-43?alert`Press the correct key.`:onkeydown=console.
 self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)?0:e=>e];
 ```
 # Major Redesigns
-Some methods may outshine the usual ones at specific tasks. For example, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
+Specific tasks and unusual situations may favor niche methods over the usual ones. For example, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
 for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
@@ -110,9 +110,9 @@ In RegExp, certain cases, such as when a variable or primitive must be parsed, s
 'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
 'long_example'.repeat(4e20).split(RegExp(`(?<=^(?:[^]{${3e18}})+)`));
 ```
-A complete redesign of the entire system may occur if a better function or combination of methods appears. They may be time-consuming, so they should be done thoroughly on the first try.  
+An entire system may need to be redesigned if a better combination of methods appears. If redesigns are too time-consuming, then they should be done thoroughly on the first try.  
   
-Grouping commonly repeated code throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. These can be modified to call themselves, and even replace finite loops.
+Grouping code that is repeated throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. They can be modified to call themselves, and even replace finite loops.
 ```js
 for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[b]];
 
@@ -124,7 +124,7 @@ for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[
 for(e=0;e++<255;)[a[b],a[c],d[b],d[c]]=[a[c],a[b],d[c],d[b]];
 ```
 # Mixing with Optimization
-If a script needs to run thousands of times per minute, then avoid the use of RegExp, and avoid any function-group-minifying. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
+If a script needs to run thousands of times per minute, then steer clear of RegExp, and avoid any function-group-minifying. `.split`, as a replacement for arrays of strings, should also be avoided under those conditions.  
   
 `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.). `.includes` is only the fastest when used with arrays.  
   
