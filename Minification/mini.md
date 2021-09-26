@@ -65,7 +65,7 @@ Common Usage | Function | Replacement
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
 
 ## Minor Adjustments
-Logic, ternary operators, and arrow functions tend to use parentheses to run groups of statements. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they are the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
+Logic, ternary operators, and arrow functions tend to use parentheses to run groups of statements. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they have the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
 ```js
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
 
