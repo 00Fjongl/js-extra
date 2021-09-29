@@ -108,7 +108,7 @@ Logged list:
 Uncaught TypeError: a.split is not a function
 */
 ```
-With the tagged templates, arrays of strings can be replaced with the `.split` function after **5** strings.
+With the tagged templates, arrays of strings can be replaced by the `.split` function after **5** strings.
 ```js
 ['1','2','3','4','5']
 '1,2,3,4,5'.split`,`
