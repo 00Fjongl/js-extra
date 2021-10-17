@@ -5,7 +5,7 @@ Mixing via attributes introduces the incentive of designing the code in a way th
 Standard | Substitute
 ------ | ----------
 `document.documentElement` | `document.all[0]` or `document.lastChild`
-`<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA onload=alert()>` | `<img src style=display:none onerror=alert()>`
+`<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA onload=alert()>` | `<img src style=display:none onerror=alert()>` or `<img src width=0 onerror=alert()>`
 # Filenames
 Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
 ```js
