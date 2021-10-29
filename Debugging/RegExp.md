@@ -16,5 +16,7 @@ JavaScript | All
 `\bTEST\b` | `(?<!\w)TEST(?!\w)`
 `\BTEST\B` | `(?<=\w)TEST(?=\w)`
 
-For a JavaScript regular expression like `(?<!abc+)TEST`, one may need to take the first captured group from a replacement such as `(?!(?<=ab)c+TEST)[\s\S]*(TEST)`.  
+For a JavaScript regular expression like `(?<!abc+)TEST`, one may need to take the first captured group from a replacement such as this:  
+`(?!(?<=ab)c+TEST)[\s\S]*(TEST)`  
+  
 This is the consequence of using a look-behind assertion that can vary indefinitely.
