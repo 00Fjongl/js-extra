@@ -3,7 +3,7 @@ A nonstandard guide to reformatting JavaScript code.
 Currently a work-in-progress.  
   
 Contents:  
-[Regular expressions](https://github.com/00Fjongl/js-extra/blob/0/Debugging/RegExp.md)
+[Regular expressions](https://github.com/00Fjongl/js-extra/blob/0/Debugging/RegExp.md)  
 [Numerical rounding](https://github.com/00Fjongl/js-extra/blob/0/Debugging/num.md)  
 [Basic minification](https://github.com/00Fjongl/js-extra/blob/0/Minification/basic.md)  
 [Greater minification](https://github.com/00Fjongl/js-extra/blob/0/Minification/mini.md)  
