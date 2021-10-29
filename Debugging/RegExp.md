@@ -3,7 +3,7 @@ The regular expression implementation in JavaScript may differ slightly from oth
 An expression written in JavaScript is more likely to cause errors when transported to Python's implementation.  
 When transporting outside of JavaScript:
 * Look-behind assertions must be fixed-width, meaning that the number of characters cannot vary.
-  * This does not extend to assertions that search for multiple matches of the same length, or look-ahead assertions.
+  * This does not extend to searches for different items of the same length, or look-ahead assertions.
 * `[^]` may throw an error.
 * Word breaks signified by `\b` may not function as intended.
 * Regular expression flags are set in different ways.
