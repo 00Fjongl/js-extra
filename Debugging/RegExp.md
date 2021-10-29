@@ -5,8 +5,8 @@ When transporting outside of JavaScript:
 * Look-behind assertions must be fixed-width, meaning that the number of characters cannot vary.
 * `[^]` may throw an error.
 * Word breaks signified by `\b` may not function as intended.
-* Regular expression flags are set in different ways.
-To remedy some compatibility issues, the following can be replaced.  
+* Regular expression flags are set in different ways.  
+To remedy some compatibility issues, the following can be replaced.
 JavaScript | All
 ---------- | ---
 `(?<!abb?)TEST` | `(?<!ab)(?<!abb)TEST`
