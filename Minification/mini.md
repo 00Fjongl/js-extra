@@ -56,6 +56,7 @@ Reassignments for object (not property) references have the same range as with t
 Common Usage | Function | Replacement
 ------------ | ------- | -----------
 `/(.\|\n)/` or `/[\s\S]/` | Represent any character | `/[^]/`
+`/\w|-|\./` | Search for certain characters, including dots | `/[\w.-]/`
 `!isFinite(c)?a():b()` | Execute `a` if not true, or `b` if true | `(isFinite(c)?b:a)()`
 `a>=b?c():d()` | Execute `c` if `a` is greater than or equal to `b`, or `d` if not | `(a<b?d:c)()`
 `undefined` | Return a nearly empty placeholder | `0[0]`, `0[statement]`, `function().$`, or `mangled_variable.$`
