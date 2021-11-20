@@ -13,7 +13,7 @@ JavaScript | All
 ---------- | ---
 `(?<!abb?)TEST` | `(?<!ab)(?<!abb)TEST`
 `(?<=a[bc]{1,2})TEST` | `((?<=a[bc])\|(?<=a[bc]{2}))TEST` or `(?:(?<=a[bc])\|(?<=a[bc]{2}))TEST`
-`(?<!ca{1,5}b)TEST` | `(?<!((?<=ca)\|(?<=caa)\|(?<=caaa)\|(?<=ca{4})\|(?<=ca{5}))b)TEST`
+`(?<!ba{1,5}cdefghijklmnopqrstuvwxyz)TEST` | `(?<!((?<=ba)\|(?<=baa)\|(?<=baaa)\|(?<=ba{4})\|(?<=ba{5}))cdefghijklmnopqrstuvwxyz)TEST`
 `[^]` | `[\s\S]`, `[\w\W]`, `[\d\D]`, etc.
 `\bTEST\b` | `(?<!\w)TEST(?!\w)`
 `\BTEST\B` | `(?<=\w)TEST(?=\w)`
