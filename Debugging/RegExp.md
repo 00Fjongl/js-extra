@@ -12,12 +12,13 @@ To remedy some compatibility issues, the following can be replaced.
 JavaScript | All
 ---------- | ---
 `(?<!abb?)TEST` | `(?<!ab)(?<!abb)TEST`
-`(?<=a[bc]{1,2})TEST` | `((?<=a[bc])\|(?<=a[bc]{2}))TEST` or `(?:(?<=a[bc])\|(?<=a[bc]{2}))TEST`
+`(?<=a[bc]{1,2})TEST` | `(?:(?<=a[bc])\|(?<=a[bc]{2}))TEST`
 `(?<!ab{1,5}cdefghijklmnop)TEST` | `(?<!(?:(?<=ab)\|(?<=abb)\|(?<=abbb)\|(?<=ab{4})\|(?<=ab{5}))cdefghijklmnop)TEST`
 `[^]` | `[\s\S]`, `[\w\W]`, `[\d\D]`, etc.
 `\bTEST\b` | `(?<!\w)TEST(?!\w)`
 `\BTEST\B` | `(?<=\w)TEST(?=\w)`
-
+###### \*Appearances of `?:` are optional.
+  
 For transporting a JavaScript regular expression like `(?<!abc+)TEST`, one may be forced to take the first captured group from a replacement such as this:  
 `(?!(?<=ab)c+TEST)[\s\S]*(TEST)`  
   
