@@ -77,7 +77,7 @@ isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
 The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases will disrupt its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Expression interpolation and unused function arguments can also behave this way.  
   
 ### Synonymous Code
-Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognition, rather than revision. While some less uncommon, more applicable techniques are shared, not all are covered. Further revisions may involve locating niche "synonyms."  
+Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognition, rather than revision. While some of the more applicable methods are shared, not all are covered. Further revisions may involve identifying niche "synonyms."  
   
 Consider some of the shorthand assignment operators. They can be applied to many scenarios, if approached creatively.  
 ```js
@@ -101,7 +101,7 @@ self.onkeydown=e=>(e.keyCode-43?alert`Press the correct key.`:onkeydown=console.
 self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)?0:e=>e];
 ```
 # Major Redesigns
-Specific tasks and unusual situations may favor niche methods over the usual ones. For example, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
+Specific tasks and unusual situations may be more suited for unconventional methods. For example, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
 for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
@@ -112,7 +112,7 @@ In RegExp, certain cases, such as when a variable or primitive must be parsed, s
 'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
 'long_example'.repeat(4e20).split(RegExp(`(?<=^(?:[^]{${3e18}})+)`));
 ```
-An entire system may need to be redesigned if a better combination of methods appears. If redesigns are too time-consuming, then they should be done thoroughly on the first try.  
+Sometimes, upon discovering a better combination of methods, an entire system may need to be reworked. If redesigns are too time-consuming, then they should be done thoroughly on the first try.  
   
 Grouping code that is repeated throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. They can be modified to call themselves, and even replace finite loops.
 ```js
@@ -130,6 +130,6 @@ If a script needs to run thousands of times per minute, then steer clear of RegE
   
 `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.). `.includes` is only the fastest when used with arrays.  
   
-Unnecessary parentheses create more return values, which may cause slight amounts of lag. Turning arrays into strings, or from one type to another, results in some lag. This is apparent through tagged templates in place of strings, for arguments.  
+Unnecessary parentheses create unneeded return values, which may cause slight amounts of lag. Turning arrays into strings, or from one type to another, results in some lag. This is apparent through tagged templates in place of strings, for arguments.  
   
 Properties accessed through bracket notation leave minimal differences in performance, even if the string is replaced by a variable. However, large variable assignments will consume memory.  
