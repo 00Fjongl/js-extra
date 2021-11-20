@@ -17,7 +17,7 @@ JavaScript | All
 `[^]` | `[\s\S]`, `[\w\W]`, `[\d\D]`, etc.
 `\bTEST\b` | `(?<!\w)TEST(?!\w)`
 `\BTEST\B` | `(?<=\w)TEST(?=\w)`
-###### \*Appearances of `?:` are optional.
+###### Appearances of `?:` are optional.  
   
 For transporting a JavaScript regular expression like `(?<!abc+)TEST`, one may be forced to take the first captured group from a replacement such as this:  
 `(?!(?<=ab)c+TEST)[\s\S]*(TEST)`  
