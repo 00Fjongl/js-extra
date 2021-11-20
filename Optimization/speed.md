@@ -1,4 +1,4 @@
-Code | Function | Ranking by Fastest
+Code | Function | Approximate Ranking by Fastest
 ---- | -------- | ------------------
 `'abc123'.includes('abc')` | Check if `abc123` includes `abc` | 3
 `'abc123'.indexOf('abc')+1` | Check if `abc123` includes `abc` | 1
