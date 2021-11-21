@@ -11,3 +11,5 @@ Certain scenarios may limit the usability of `BigInt`.
 `1.00000000000000011102230246251565404236316680908203125`
 ##### Second-smallest absolute value:
 `5e-324`  ~~Use `2e-16` to make an actual difference~~
+##### Maximum array length:
+`4294967295`
