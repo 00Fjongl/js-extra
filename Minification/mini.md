@@ -66,6 +66,7 @@ Common Usage | Function | Replacement
 `(a/2\|0)-a/2` | Check for an even number | `a%2`
 `~~a-a` | Check for decimals | `a%1`
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
+`'abc'.startsWith`ab`` | Check if a string starts with a certain value | `!'abc'.indexOf`ab``
 
 ## Minor Adjustments
 Logic, ternary operators, and arrow functions tend to use parentheses to run groups of statements. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they have the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
