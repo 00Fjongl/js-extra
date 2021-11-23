@@ -89,6 +89,7 @@ a=null,c=a&=b=256;
 
 a=(a+(b=c))%256;
 a=(a+=b=c)%256;
+a+=b=c,a%=256;
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
