@@ -92,7 +92,8 @@ a=(a+=b=c)%256;
 a+=b=c,a%=256;
 ```
 ###### Replacing `.startsWith`
-The `.startsWith` function is made completely useless by this usage of `.indexOf`. Not only is this way shorter, but it is even faster!```js
+The `.startsWith` function is made completely useless by this usage of `.indexOf`. Not only is this way shorter, but it is even faster!
+```js
 `'abc'.startsWith(d)`;
 `!'abc'.indexOf(d)`;
 ```
