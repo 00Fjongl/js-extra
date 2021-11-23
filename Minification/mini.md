@@ -66,7 +66,7 @@ Common Usage | Function | Replacement
 `(a/2\|0)-a/2` | Check for an even number | `a%2`
 `~~a-a` | Check for decimals | `a%1`
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
-`'abc'.startsWith(d)` | Check if a string starts with a certain value | `!'abc'.indexOf(d)`
+`a+(b\|\|'')` | Prevent `b` from affecting the string if it is `null` or `undefined` | `a+[b]`
 
 ## Minor Adjustments
 Logic, ternary operators, and arrow functions tend to use parentheses to run groups of statements. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they have the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
@@ -90,6 +90,11 @@ a=null,c=a&=b=256;
 a=(a+(b=c))%256;
 a=(a+=b=c)%256;
 a+=b=c,a%=256;
+```
+###### Replacing `.startsWith`
+The `.startsWith` function is made completely useless by this usage of `.indexOf`. Not only is this way shorter, but it is even faster!```js
+`'abc'.startsWith(d)`;
+`!'abc'.indexOf(d)`;
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
