@@ -94,8 +94,8 @@ a+=b=c,a%=256;
 ###### Replacing `.startsWith`
 The `.startsWith` function is made completely useless by this usage of `.indexOf`. This is not only shorter, but faster!
 ```js
-`'abc'.startsWith(d)`;
-`!'abc'.indexOf(d)`;
+'abc'.startsWith(d);
+!'abc'.indexOf(d);
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
