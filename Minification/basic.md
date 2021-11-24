@@ -18,6 +18,27 @@ Object===self['Object'];
 
 "use strict";globalThis.variable=Math.PI;
 ```
+Brackets are useful for working with strings. They can be useful when a number, `undefined`, or `null` is involved.
+```js
+//prevent null or undefined from affecting the string
+a+(b||'');
+a+[b];
+
+element.value=a||b||'';
+element.value=a||[b];
+
+//return '33'
+1+2+''+3;
+1+2+[3];
+
+//convert BigInt to integer
++(3n+'');
++[3n];
+
+//use BigInt like a number
+1/(3n+'');
+1/[3n];
+```
 `if` statements tend to be impractical; use ternary/conditional operators, boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward `0`. It differs from `Math.floor` by rounding upward for negative integers, and reversing their sign after `2**31-1`.
 ```js
 if(a==3)a=0;
