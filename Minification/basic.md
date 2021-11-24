@@ -18,7 +18,7 @@ Object===self['Object'];
 
 "use strict";globalThis.variable=Math.PI;
 ```
-Brackets are useful for working with strings. They can be useful when a number, `undefined`, or `null` is involved.
+Brackets are useful for working with strings. They can be useful when a number, `undefined`, or `null` is involved, but still function as arrays if not concatenated.
 ```js
 //prevent null or undefined from affecting the string
 a+(b||'');
