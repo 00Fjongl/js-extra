@@ -23,5 +23,5 @@ For transporting a JavaScript regular expression like `(?<!abc+)TEST`, one may b
 `(?!(?<=ab)c+TEST)[\s\S]*(TEST)`  
   
 This is the consequence of using a look-behind assertion that can vary indefinitely.
-### Captured Groups
+#### Captured Groups
 Content captured within parentheses will be updated whenever called via back references. For example, `/(... )+\1/` cannot match `123 aaa 123 `, but will match the entirety of `123 aaa 123 123 `. `(...)+` acts normally until `\1` is reached. The capturing group initially picks up `123 `, but the following `aaa ` updates the match, meaning that `\1` searches for that instead of `123 `.
