@@ -103,7 +103,7 @@ Math.random()*2|!setTimeout(console.log,5e3,'test');
 ```
 `**0` and all bitwise operators will parse `NaN` (or `undefined`, `'abc'`, etc.) as `0`. Consequently, there are differences between `a!=3`, `a-3`, and `a^3` as conditions. Numerical operations are commonplace in minification. As such, these operators may reduce bugs and overall code size when examined.  
   
-Is a value inconsistent? Is it causing issues with logic? Arrays are always truthy. Use `!value`, `!!value`, `[value]`, or `![value]` when in a pinch!  
+Is a value inconsistent? Is it causing issues with logic? Arrays are always truthy. Use `!value`, `!!value`, `[value]`, or `![value]` when in a pinch!
 ```js
 self.onkeydown=e=>(e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)?0:e=>e,!1);
 self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)?0:e=>e];
