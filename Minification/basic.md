@@ -32,6 +32,7 @@ element.value=a||[b];
 1+2+[3];
 
 //convert BigInt to integer
+Number(3n+'');
 +(3n+'');
 +[3n];
 
