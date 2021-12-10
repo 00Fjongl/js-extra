@@ -6,7 +6,7 @@ In certain cases, elements such as `<span>` or `<div>` can be replaced with `<a>
 While the primary purpose of this is to reduce the size of HTML code, it can also shorten methods such as `.getElementsByTagName` or comparisons with `.tagName`.
 ## Events
 Event listeners can be handled in several different ways. Writing one directly into the HTML code as an attribute will create a new scope, where `this` refers to the element, instead of `window`. If `this` is not needed as a reference to the element, then the event listener may be assigned via JavaScript, so that default parameters can be used to condense the code.  
-If `this` is needed, then the scopes will be separated, and generally harder to minify. One way to remedy this could be setting global variables for `document.body.onload`. In strict mode, these may be defined via `self.Variable='test'`.
+If `this` is needed, then the scopes will be separated, and generally harder to minify. One way to remedy this could be setting global variables for `document.body.onload`. In strict mode, these may be defined as properties of `self`.
 ## Common Alternatives
 Standard | Substitute
 ------ | ----------
