@@ -83,13 +83,14 @@ Order:
 5. Addition and subraction (+,-)
 6. Bit shift (<<,>>,>>>)
 7. Comparison (<,<=,>,>=,==,!=,===,!==)
-8. Bitwise AND (&) and bitwise XOR (^)
-9. Bitwise OR (|)
-10. Logic (&&,||) and nullish coalescing (??)
-11. Ternary (condition?true:false)
-12. Assignment
-13. Destructuring (...)
-14. Comma (,)
+8. Bitwise AND (&)
+9. Bitwise XOR (^)
+10. Bitwise OR (|)
+11. Logic (&&,||) and nullish coalescing (??)
+12. Ternary (condition?true:false)
+13. Assignment
+14. Destructuring (...)
+15. Comma (,)
 */
 ```
 Some switch statements may be substituted with arrays:
