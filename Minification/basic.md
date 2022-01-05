@@ -17,6 +17,8 @@ Object===self['Object'];
 //true
 
 "use strict";globalThis.variable=Math.PI;
+variable===Math.PI;
+//true
 ```
 Brackets are useful for working with strings and `BigInt` values. They can be useful when a number, `undefined`, or `null` is involved, but still function as arrays if not concatenated.
 ```js
