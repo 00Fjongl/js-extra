@@ -107,7 +107,7 @@ Other switch statements cannot be replaced by arrays. Chains of ternary operator
 switch(a){case'dog':delete a;break;case'water':test1();break;case'ice':a=test2;break;default:test2()}
 
 //easy to continue
-//turn the condition into a number, and change with ++ or --
+//turn the condition into a number; iterate with ++ or --
 (b=>b--?b--?b?a=test2:test1():delete a:test2())(['dog','water','ice'].indexOf(a)+1)
 ```
 The grave accent, or backtick, can be used for both expression interpolation and function parsing:
