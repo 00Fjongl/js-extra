@@ -73,7 +73,7 @@ Bitwise operators `&` and `|` can perform similarly to `&&` and `||`, under much
 if(a>3&&a<6)a=0;
 a>3&a<6&&(a=0);
 //even better
-a=a>3&a<6?0:a;
+a>3&a<6?a=0:a;
 a=a<4|a>5&&a;
 a=a-4.5|0&&a;
 
@@ -108,24 +108,24 @@ switch(a){case'dog':delete a;break;case'water':test1();break;case'ice':a=test2;b
 
 //easy to continue
 //turn the condition into a number; iterate with ++ or --
-(b=>b--?b--?b?a=test2:test1():delete a:test2())(['dog','water','ice'].indexOf(a)+1)
+(b=>b--?b--?b?a=test2:test1():delete a:test2())(['dog','water','ice'].indexOf(a)+1);
 ```
 The grave accent, or backtick, can be used for both expression interpolation and function parsing:
 ```js
-'A random number: '+Math.random()+'\nIs it a lucky one?'
-`A random number: ${Math.random()}\nIs it a lucky one?`
+'A random number: '+Math.random()+'\nIs it a lucky one?';
+`A random number: ${Math.random()}\nIs it a lucky one?`;
 //expression interpolation
 
-(a=>a+a)('Help me! ')
-(a=>a+a)`Help me! `
+(a=>a+a)('Help me! ');
+(a=>a+a)`Help me! `;
 //parsing function via tagged template
 
 
 //use with caution
-console.log('test')
-console.log`test`
-console.log((a=>a.split`|`)('te|st'))
-console.log((a=>a.split`|`)`te|st`)
+console.log('test');
+console.log`test`;
+console.log((a=>a.split`|`)('te|st'));
+console.log((a=>a.split`|`)`te|st`);
 /*
 Logged list:
 
@@ -137,10 +137,10 @@ Uncaught TypeError: a.split is not a function
 ```
 With the tagged templates, arrays of strings can be replaced by the `.split` function after **5** strings.
 ```js
-['1','2','3','4','5']
-'1,2,3,4,5'.split`,`
+['1','2','3','4','5'];
+'1,2,3,4,5'.split`,`;
 
 //numbers are much faster and no larger
-['ab','cd','ef','gh','ij']
-'ab0cd0ef0gh0ij'.split(0)
+['ab','cd','ef','gh','ij'];
+'ab0cd0ef0gh0ij'.split(0);
 ```
