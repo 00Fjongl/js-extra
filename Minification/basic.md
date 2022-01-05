@@ -11,7 +11,7 @@ self.name=(a,b,c)=>a+b+c;name(1,2,3);
 //outermost layer as an anonymous function
 ((a,b,c)=>a+b+c)(1,2,3);
 ```
-Do not forget that in standard browsers, most objects can also be accessed as properties of `self` or `window`. `globalThis` can be used in many environments. Although not as efficient as storing objects themselves, one can also use them to access the global scope in strict mode:
+Do not forget that in standard browsers, most objects can also be accessed as properties of `self` or `window`. `globalThis` can be used in many environments. Although not as efficient as storing objects in variables, they allow access to the global scope in strict mode:
 ```js
 Object===self['Object'];
 //true
