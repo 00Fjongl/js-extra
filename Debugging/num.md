@@ -10,6 +10,8 @@ Certain scenarios may limit the usability of `BigInt`.
 `9007199254740992`
 ##### Greatest value equal to 1:
 `1.00000000000000011102230246251565404236316680908203125`
+##### Smallest value equal to 1:
+`0.999999999999999944488848768742172978818416595458984375`
 ##### Second-smallest absolute value:
 `5e-324`  ~~Use `2e-16` to make an actual difference~~
 ##### Maximum array length:
