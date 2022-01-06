@@ -63,7 +63,7 @@ Common Usage | Function | Replacement
 `undefined` | Return a nearly empty placeholder | `0[0]`, `0[statement]`, `function().$`, or `mangled_variable.$`
 `false` and `true` | Return a basic value to use for logic | `!1` or `0`, and `!0` or `1`
 `['a','b','c'][2]` | Return a character from a list | `'abc'[2]`
-`(a/2\|0)-a/2` | Check for an even number | `a%2` or `a&1`
+`(a/2\|0)-a/2` | Check for an even number | `a%2` or `a&1` (even after `2**31-1`)
 `~~a-a` | Check for decimals | `a%1`
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
 
