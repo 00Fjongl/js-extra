@@ -7,7 +7,7 @@ While the primary purpose of this is to reduce the size of HTML code, it can als
   
 Certain workarounds can be used when an event listener requires spaces or quotes in the attribute value:  
 * For strings that could be represented as primitives, quotes may be avoided by adding `[]` to a primitive value.
-* Many keywords are separated from variables by unary operators or by spaces. Spaces can be avoided by wrapping the variable in `()`.
+* Many keywords are separated from variables by unary operators or by spaces. Some spaces can be avoided by wrapping the variable in `()`.
   
 Similarly, SVG `<path>` elements can have quotes removed from the `d` attribute when loaded alongside HTML. Replace all spaces with commas, but preserve the space that precedes the `/` at the end of a self-closing tag.
 ## Events
