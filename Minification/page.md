@@ -12,7 +12,8 @@ Certain workarounds can be used when an event listener requires spaces or quotes
 Similarly, SVG `<path>` elements can have quotes removed from the `d` attribute when loaded alongside HTML. Replace all spaces with commas, but preserve the space that precedes the `/` at the end of a self-closing tag.
 ## Events
 Event listeners can be handled in several different ways. Writing one directly into the HTML code as an attribute will create a new scope, where `this` refers to the element, instead of `window`. If `this` is not needed as a reference to the element, then the event listener may be assigned via JavaScript, so that default parameters can be used to condense the code.  
-If `this` is needed, then the scopes will be separated, and generally harder to minify. One way to remedy this could be setting global variables for `document.body.onload`. In strict mode, these may be defined as properties of `self`.
+If `this` is needed, then the scopes will be separated, and generally harder to minify. One remedy could be assigning global variables through `document.body.onload`. In strict mode, these may be defined as properties of `self`.  
+In a few obscure cases where only one variable is needed in an event, the pre-defined variable `event` can be reassigned, as an alternative to executing a function.
 ## Common Alternatives
 Standard | Substitute
 ------ | ----------
