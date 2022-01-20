@@ -7,7 +7,7 @@ While the primary purpose of this is to reduce the size of HTML code, it can als
   
 Certain workarounds can be used when an event listener requires spaces or quotes in the attribute value:  
 * Hypothetically, for strings that could be represented as primitives, quotes could be avoided by adding `[]` to a primitive value.
-  * This would be unlikely, as it is difficult to use in cases where tagged templates or equality comparisons are needed.
+  * This would be unlikely, as it is difficult to use in cases where tagged templates, assignments, or equality comparisons are needed.
 * Keywords are separated from variables by spaces or symbols. Some spaces can be negated by wrapping the variable in `()`.
   * In some instances, `[]`, unary operators, or other symbols may be placed next to a keyword instead of `()`.
   
