@@ -138,6 +138,6 @@ If a script needs to run thousands of times per minute, then steer clear of RegE
   
 `.indexOf`, when paired with bracket notation, is likely the most optimal searching method (between `.includes`, `.startsWith`, `.endsWith`, `.search`, etc.). `.includes` is only the fastest when used with arrays.  
   
-Unnecessary parentheses create unneeded return values, which may cause slight amounts of lag. Turning arrays into strings, or from one type to another, results in some lag. This is apparent through tagged templates in place of strings, for arguments.  
+Unnecessary parentheses create unneeded return values, which could eventually affect speeds under an incredibly high-stress environment. Turning arrays into strings, or from one type to another, results in some lag. This is apparent through tagged templates in place of strings, for arguments.  
   
 Properties accessed through bracket notation leave minimal differences in performance, even if the string is replaced by a variable. However, large variable assignments will consume memory.  
