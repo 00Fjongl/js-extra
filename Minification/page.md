@@ -20,7 +20,7 @@ Standard | Substitute
 ------ | ----------
 `document.documentElement` | `document.all[0]` or `document.lastChild`
 `<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA onload=alert()>` | `<img src hidden onerror=alert()>`
-`onkeyup="return event.key==='1'"` | `onkeyup=return[]+1===event.key`
+`<input onkeyup="return event.key==='a'">` | `<input onkeyup=return+event.keyCode-65>`
 # Filenames
 Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
 ```js
