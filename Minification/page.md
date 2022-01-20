@@ -8,6 +8,7 @@ While the primary purpose of this is to reduce the size of HTML code, it can als
 Certain workarounds can be used when an event listener requires spaces or quotes in the attribute value:  
 * For strings that could be represented as primitives, quotes may be avoided by adding `[]` to a primitive value.
 * Many keywords are separated from variables by spaces or unary operators. Some spaces can be negated by wrapping the variable in `()`.
+  * In some instances, `[]`, unary operators, or other symbols may be placed next to a keyword instead of `()`.
   
 Similarly, SVG `<path>` elements can have quotes removed from the `d` attribute when loaded alongside HTML. Replace all spaces with commas, but preserve the space that precedes the `/` at the end of a self-closing tag.
 ## Events
@@ -19,6 +20,7 @@ Standard | Substitute
 ------ | ----------
 `document.documentElement` | `document.all[0]` or `document.lastChild`
 `<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA onload=alert()>` | `<img src hidden onerror=alert()>`
+`onkeyup="return event.key==='1'"` | `onkeyup=return[]+1===event.key`
 # Filenames
 Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
 ```js
