@@ -9,6 +9,7 @@ Certain workarounds can be used when an event listener requires spaces or quotes
 * Hypothetically, for strings that could be represented as primitives, quotes could be avoided by adding `[]` to a primitive value.
   * This would be unlikely, as it would not help in cases where tagged templates or equality comparisons are used.
   
+  
 * Many keywords are separated from variables by spaces or unary operators. Some spaces can be negated by wrapping the variable in `()`.
   * In some instances, `[]`, unary operators, or other symbols may be placed next to a keyword instead of `()`.
   
