@@ -113,12 +113,12 @@ Specific tasks and unusual situations may be more suited for unconventional meth
 ```js
 for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
-'long_example'.repeat(400).split(/(?<=^(?:[^]{2000})+)/);
+'long_example'.repeat(400).split(/(?=^(?:[^]{2000})+)/);
 ```
 In RegExp, certain cases, such as when a variable or primitive must be parsed, should be handled with the `RegExp()` function itself.
 ```js
-'long_example'.repeat(4e20).split(/(?<=^(?:[^]{3000000000000000000})+)/);
-'long_example'.repeat(4e20).split(RegExp(`(?<=^(?:[^]{${3e18}})+)`));
+'long_example'.repeat(4e20).split(/(?=^(?:[^]{3000000000000000000})+)/);
+'long_example'.repeat(4e20).split(RegExp(`(?=^(?:[^]{${3e18}})+)`));
 ```
 Sometimes, upon discovering a better combination of methods, an entire system may need to be reworked. If redesigns are too time-consuming, then they should be done thoroughly on the first try.  
   
