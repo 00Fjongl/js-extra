@@ -109,7 +109,7 @@ self.onkeydown=e=>(e.keyCode-43?alert`Press the correct key.`:onkeydown=console.
 self.onkeydown=e=>![e.keyCode-43?alert`Press the correct key.`:onkeydown=console.log(e.key)?0:e=>e];
 ```
 # Major Redesigns
-Specific tasks and unusual situations may be more suited for unconventional methods. For example, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
+Specific tasks or abnormal cases may be more suited for unconventional methods. For instance, a self-invoked function may out-shrink a temporary `for` loop, `while` loop, `Array.forEach`, or `Array.map`. The `.split` function can even be used to split every 2,000 characters better than `for` loops can:
 ```js
 for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
