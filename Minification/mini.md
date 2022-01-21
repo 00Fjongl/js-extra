@@ -122,7 +122,7 @@ In RegExp, certain cases, such as when a variable or primitive must be parsed, s
 ```
 Sometimes, upon discovering a better combination of methods, an entire system may need to be reworked. If redesigns are too time-consuming, then they should be done thoroughly on the first try.  
   
-Grouping code that is repeated throughout a script may drastically reduce its length. Functions are the most flexible method to group statements, although execution speed and memory space dip when called often. They can be modified to call themselves, and even replace finite loops.
+Grouping code that is repeated throughout a script may drastically reduce its length. Functions are the most flexible method to group statements. Where default parameters are useful for grouping repeated objects and strings, functions are able to group entire chunks that include `for` loops and more. They can be modified to call themselves, and even replace finite loops altogether, but execution speed and memory space may dip when called often.
 ```js
 for(e=0;e<255;e++)[a[b],a[c]]=[a[c],a[b]];for(e=0;e<255;e++)[d[b],d[c]]=[d[c],d[b]];
 
