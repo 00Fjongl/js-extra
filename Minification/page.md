@@ -15,7 +15,7 @@ Similarly, SVG `<path>` elements can have quotes removed from the `d` attribute 
 ## Events
 Event listeners can be handled in several different ways. Writing one directly into the HTML code as an attribute will create a new scope, where `this` refers to the element, instead of `window`. If `this` is not needed as a reference to the element, then the event listener may be assigned via JavaScript, so that default parameters can be used to condense the code.  
 If `this` is needed, then the scopes will be separated, and generally harder to minify. One remedy could be assigning global variables through `document.body.onload`. In strict mode, these may be defined as properties of `self`.  
-In a few obscure cases where only one variable is needed in an event, the pre-defined variable `event` can be reassigned, as an alternative to executing a function.
+In a few cases where only one variable is needed in an event listener attribute, the pre-defined variable `event` can be reassigned, as an alternative to using default parameters of functions. A similar alternative is to define properties of `this` from within the attribute (e.g. `this.s=65536`).
 ## Common Alternatives
 Standard | Substitute
 ------ | ----------
