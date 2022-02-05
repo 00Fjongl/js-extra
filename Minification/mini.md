@@ -78,7 +78,7 @@ a=b&&(console.log(b),b.replace(/123/,a));
 a=b&&b.replace(/123/,a,console.log(b));                    //unused arguments abused
 
 (a=>a&&(delete array1,a[4]))(array1);
-array1&&array1[delete array1,4];                   //bracket notation abused
+array1&&array1[delete array1,4];                     //bracket notation abused
 
 a?(s='123',`abc${s++}ghi`):s=0;
 a?`abc${s='123',s++}ghi`:s=0;                  //expression interpolation abused
