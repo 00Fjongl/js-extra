@@ -72,27 +72,16 @@ Common Usage | Function | Replacement
 Logic, ternary operators, and arrow functions tend to use parentheses to run groups of statements. In these situations, code such as `(isFinite(c)?b:a)()` is preferable to `isFinite(c)?b():a()`, even though they have the same size. It creates a set of parentheses at no cost to size, and their singular return value can be abused to make more room.
 ```js
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
-
-//parentheses abused
-isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
-
+isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();      //parentheses abused
 
 (a=>a&&(delete array1,a[4]))(array1);
-
-//bracket notation abused
-array1&&(array1[delete array1,4]);
-
+array1&&(array1[delete array1,4]);                               //bracket notation abused
 
 a=b&&(console.log(b),b.replace(/123/,a));
-
-//unused arguments abused
-a=b&&b.replace(/123/,a,console.log(b));
-
+a=b&&b.replace(/123/,a,console.log(b));                          //unused arguments abused
 
 a?(s='123',s++,`abc${s}ghi`):s=0;
-
-//expression interpolation abused
-a?`abc${s='123',++s}ghi`:s=0;
+a?`abc${s='123',++s}ghi`:s=0;                                    //expression interpolation abused
 ```
 Keep in mind that if this changes the order in which functions or statements execute, then the code may not run as intended. Beyond function returns, conditionals, and the rest of the demonstrations above, the method may prove useful in working with keywords, default parameters, passing arguments, and efficiently reassigning variables.  
   
