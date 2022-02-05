@@ -94,7 +94,7 @@ a?(s='123',s++,`abc${s}ghi`):s=0;
 //expression interpolation abused
 a?`abc${s='123',++s}ghi`:s=0;
 ```
-Keep in mind that if this changes the order in which functions or statements execute, then the code may not run as intended. Beyond function returns, conditionals, and the rest of the demonstrations above, the method may prove useful in working with keywords, default parameters, and efficiently reassigning variables.  
+Keep in mind that if this changes the order in which functions or statements execute, then the code may not run as intended. Beyond function returns, conditionals, and the rest of the demonstrations above, the method may prove useful in working with keywords, default parameters, passing arguments, and efficiently reassigning variables.  
   
 ### Synonymous Code
 Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognition, rather than revision. While some of the more applicable methods are shared, not all are covered. Further revisions may involve identifying niche "synonyms."  
