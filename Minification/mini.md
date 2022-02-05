@@ -74,14 +74,14 @@ Logic, ternary operators, and arrow functions tend to use parentheses to run gro
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();      //parentheses abused
 
-(a=>a&&(delete array1,a[4]))(array1);
-array1&&(array1[delete array1,4]);                               //bracket notation abused
-
 a=b&&(console.log(b),b.replace(/123/,a));
-a=b&&b.replace(/123/,a,console.log(b));                          //unused arguments abused
+a=b&&b.replace(/123/,a,console.log(b));                    //unused arguments abused
+
+(a=>a&&(delete array1,a[4]))(array1);
+array1&&(array1[delete array1,4]);                   //bracket notation abused
 
 a?(s='123',s++,`abc${s}ghi`):s=0;
-a?`abc${s='123',++s}ghi`:s=0;                                    //expression interpolation abused
+a?`abc${s='123',++s}ghi`:s=0;                  //expression interpolation abused
 ```
 Keep in mind that if this changes the order in which functions or statements execute, then the code may not run as intended. Beyond function returns, conditionals, and the rest of the demonstrations above, the method may prove useful in working with keywords, default parameters, passing arguments, and efficiently reassigning variables.  
   
