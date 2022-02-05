@@ -75,8 +75,26 @@ isFinite(c)||(console.log('c is infinite'),isNaN(c)?b():a());
 
 //parentheses abused
 isFinite(c)||(console.log('c is infinite'),isNaN(c)?b:a)();
+
+
+(a=>a&&(delete array1,a[4]))(array1);
+
+//bracket notation abused
+array1&&(array1[delete array1,4]);
+
+
+a=b&&(console.log(b),b.replace(/123/,a));
+
+//unused arguments abused
+a=b&&b.replace(/123/,a,console.log(b));
+
+
+a?(s='123',s++,`abc${s}ghi`):s=0;
+
+//expression interpolation abused
+a?`abc${s='123',++s}ghi`:s=0;
 ```
-The same can also be done with bracket notation (e.g. `array1&&array1[delete array1,4]`), although some cases will disrupt its return value. Beyond function returns and conditionals, the method is applicable to working with keywords, default parameters, passing arguments, and efficiently reassigning variables. Expression interpolation and unused function arguments can also behave this way.  
+Keep in mind that if this changes the order in which functions or statements execute, then the code may not run as intended. Beyond function returns, conditionals, and the rest of the demonstrations above, the method may prove useful in working with keywords, default parameters, and efficiently reassigning variables.  
   
 ### Synonymous Code
 Unfortunately, some pieces of code have optimizations so situational that the challenge lies in recognition, rather than revision. While some of the more applicable methods are shared, not all are covered. Further revisions may involve identifying niche "synonyms."  
