@@ -42,7 +42,7 @@ Number(3n+'');
 1/(3n+'');
 1/[3n];
 ```
-`if` statements tend to be impractical; use ternary/conditional operators, boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward `0`. It differs from `Math.floor` by rounding upward for negative integers, and reversing their sign after `2**31-1`.
+`if` statements tend to be impractical; use ternary/conditional operators, Boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward `0`. It differs from `Math.floor` by rounding upward for negative integers, and reversing their sign after `2**31-1`.
 ```js
 if(a==3)a=0;
 //0 is falsy
