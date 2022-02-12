@@ -22,6 +22,7 @@ Standard | Substitute
 `document.documentElement` | `document.all[0]` or `document.lastChild`
 `<img src=data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAAA onload=alert()>` | `<img src hidden onerror=alert()>`
 `<input onkeyup="delete self.onkeyup">` | `<input onkeyup=delete(self.onkeyup)>`
+`<img src hidden onerror="setInterval(console.log,10,'test')">` | `<img src hidden onerror="src=src;console.log('test')">`
 # Filenames
 Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
 ```js
