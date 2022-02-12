@@ -65,6 +65,7 @@ Common Usage | Function | Replacement
 `['a','b','c'][2]` | Return a character from a list | `'abc'[2]`
 `(a/2\|0)-a/2` | Check for an even number | `a%2` or `a&1` (even after `2**31-1`)
 `~~a-a` | Check for decimals | `a%1`
+`Math.round(a)` | Round `a` to the nearest whole number | `a+.5\|0`
 `Math.sqrt(a)` | Return the square root of `a` | `a**.5`
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
 
