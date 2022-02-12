@@ -2,7 +2,7 @@
 JavaScript can be loaded via script tags or event listeners. Using an image element with the `onload` (or `onerror`) attribute is the most reliable alternative to ordinary scripts.  
 Using attributes to execute JavaScript introduces the incentive of designing the code in a way that validates, without requiring quotes or apostrophes for attribute assignments.
 ## Elements
-In certain cases, elements such as `<span>` or `<div>` can be replaced with `<a>`, or even elements such as `<b>`, `<i>`, `<s>`, and `<u>`, when the styling (e.g. `display:block` or `font:1em Arial`) is properly readjusted. If the descendants of those elements cannot be placed in `<a>`, then the other alternatives may be valid.  
+In certain cases, elements such as `<span>` or `<div>` can be replaced with `<a>`, or even elements such as `<b>`, `<i>`, `<s>`, and `<u>`, when the styling is properly readjusted (e.g. `display:block` or `font:1em Arial`). If there are descendants that cannot be placed in `<a>`, then the other elements listed may be valid.  
 While the primary purpose of this is to reduce the size of HTML code, it can also shorten methods such as `.getElementsByTagName` or comparisons with `.tagName`.  
   
 Certain workarounds can be used when an event listener requires spaces or quotes in the attribute value:  
