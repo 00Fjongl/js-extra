@@ -1,6 +1,6 @@
 #### Unfortunately, JavaScript's ordinary integers feature proportional rounding.
 Here are a few notable values, *for anyone looking to calculate the rate of rounding,* for anyone looking to avoid it, or for other purposes.  
-Numbers expressed in scientific notation will be equally accurate, unless the degree itself is also rounded inaccurately.  
+Numbers expressed in scientific notation will be equally accurate, unless the degree itself is also rounded.  
 `BigInt` can be used with several operators, including bitwise operators, but omits any decimals.  
 Certain scenarios may limit the usability of `BigInt`.
 ##### Closest absolute value before ±Infinity:
