@@ -107,8 +107,8 @@ The `.startsWith` function is made completely useless by this usage of `.indexOf
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
-Math.random()*2|0&setTimeout(console.log,5e3,'test');
-Math.random()*2|!setTimeout(console.log,5e3,'test');
+Math.random()*5e3|0&setTimeout(console.log,5e3,'test');
+Math.random()*5e3|!setTimeout(console.log,5e3,'test');
 ```
 `**0` and all bitwise operators will parse `NaN` (or `undefined`, `'abc'`, etc.) as `0`. Consequently, there are differences between `a!=3`, `a-3`, and `a^3` as conditions. Numerical operations are commonplace in minification. As such, these operators may reduce bugs and overall code size when examined.  
   
