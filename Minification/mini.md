@@ -58,7 +58,7 @@ Common Usage | Function | Replacement
 `/(.\|\n)/` or `/[\s\S]/` | Represent any character | `/[^]/`
 `/\w\|-\|\./` | Search for certain characters, including dots | `/[\w.-]/`
 `/[A-z\d]/` | Search for letters and numbers | `/[^\W_]/`
-`!isFinite(c)?a():b()` | Execute `a` if not true, or `b` if true | `(isFinite(c)?b:a)()`
+`!condition?a():b()` | Execute `a` if not true, or `b` if true | `(condition?b:a)()`
 `a>=b?c():d()` | Execute `c` if `a` is greater than or equal to `b`, or `d` if not | `(a<b?d:c)()`
 `undefined` | Return a nearly empty placeholder | `0[0]`, `0[statement]`, `function().$`, or `mangled_variable.$`
 `false` and `true` | Return a basic value to use for logic | `!1` or `0`, and `!0` or `1`
