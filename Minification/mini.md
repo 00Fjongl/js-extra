@@ -122,7 +122,7 @@ Math.ceil(a);
 
 isNaN(a);
 a*a+1;       //for !isNaN(a)
-a!=a;
+a!=a;        //for typeof a!='object'
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
