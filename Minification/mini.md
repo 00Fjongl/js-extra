@@ -65,8 +65,6 @@ Common Usage | Function | Replacement
 `['a','b','c'][2]` | Return a character from a list | `'abc'[2]`
 `(a/2\|0)-a/2` | Check for an even number | `a%2` or `a&1` (even after `2**31-1`)
 `~~a-a` | Check for decimals | `a%1`
-`isFinite(a)` | Check if `a` is finite | `1/a` or `1/a!=0` (to convert to Boolean)
-`Math.sqrt(a)` | Return the square root of `a` | `a**.5`
 `Math.random()*2\|0` | Randomly return truthy or falsy values | `Math.random()<.5`
 
 ## Minor Adjustments
@@ -104,6 +102,27 @@ The `.startsWith` function is made completely useless by this usage of `.indexOf
 ```js
 'abc'.startsWith(d);
 !'abc'.indexOf(d);
+```
+###### Replacing several math functions
+Common functions such as `Math.floor` and `Math.round` are relatively simple to replace. Some of these other ones would demand a little more consideration.
+```js
+isFinite(a);
+1/a!=0;      //as a boolean
+1/a;
+
+Math.sqrt(a);
+a**.5;
+
+Math.abs(a);
+(a*a)**.5;
+a<0?-a:a;
+
+Math.ceil(a);
+-~a-!(a%1);
+
+isNaN(a);
+a*a+1;       //for !isNaN(a)
+a!=a;
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
