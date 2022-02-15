@@ -104,7 +104,7 @@ The `.startsWith` function is made completely useless by this usage of `.indexOf
 !'abc'.indexOf(d);
 ```
 ###### Replacing several math functions
-Common functions such as `Math.floor` and `Math.round` are relatively simple to replace. Some of these other ones would demand a little more consideration.
+Common functions such as `Math.floor` and `Math.round` are relatively simple to replace. Some of these other ones would demand a little more consideration. Keep in mind that versions with comparison operators may be preferable for bitwise operations.
 ```js
 isFinite(a);
 1/a!=0;      //as a boolean
