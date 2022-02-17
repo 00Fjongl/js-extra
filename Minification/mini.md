@@ -18,7 +18,7 @@ Property | Minimum Uses | Examples
 `.123456(789)` | 3 | `.replace`, `.length`, `.filter`
 `.12345` | 4 | `.split`, `.slice`, `.round`
 `.1234` | 5 | `.join`, `.ceil`, `.bind`
-`.123` | 9 | `.raw`, `.map`
+`.123` | 9 | `.raw`, `.map`, `.pop`
 
 Object | Min. | Examples
 ------ | ---- | --------
@@ -122,7 +122,7 @@ Math.ceil(a);
 
 isNaN(a);
 a*a+1;       //for !isNaN(a)
-a!=a;        //if typeof a!='object'
+a!=a;        //while typeof a!='object'
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
