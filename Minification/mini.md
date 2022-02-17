@@ -18,7 +18,7 @@ Property | Minimum Uses | Examples
 `.123456(789)` | 3 | `.replace`, `.length`, `.filter`
 `.12345` | 4 | `.split`, `.slice`, `.round`
 `.1234` | 5 | `.join`, `.ceil`, `.bind`
-`.123` | 9 | `.raw`, `.map`, `.pop`
+`.123` | 9 | `.raw`, `.map`, `.abs`
 
 Object | Min. | Examples
 ------ | ---- | --------
