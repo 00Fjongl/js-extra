@@ -122,7 +122,8 @@ Math.ceil(a);
 -~a-!(a%1);
 
 isNaN(a);
-a*a+1;       //for !isNaN(a)
+a**2+1;      //for !isNaN(a)
+a*a+1;
 a!=a;        //while typeof a!='object'
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
