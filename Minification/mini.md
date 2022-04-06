@@ -144,7 +144,7 @@ Specific tasks or abnormal cases may be more suited for unconventional methods. 
 for(i='long_example'.repeat(400),e=0,a=[];e<i.length;)a.push(i.slice(e,e+=2e3));a;
 
 'long_example'.repeat(400).split(/(?<=^(?:[^]{2000})+)/);
-'long_example'.repeat(400).split(/(?=(?:[^]{2000})+$)/);  //other way around
+'long_example'.repeat(400).split(/(?=(?:[^]{2000})+$)/);  //splits from other end of the string
 ```
 In RegExp, certain cases, such as when a variable or primitive must be parsed, should be handled with the `RegExp()` function itself.
 ```js
