@@ -3,12 +3,12 @@ A nonstandard guide to reformatting JavaScript code.
 Currently a work-in-progress.  
   
 Contents:  
-[Regular expressions](https://github.com/00Fjongl/js-extra/blob/0/Debugging/RegExp.md)  
-[Numerical rounding](https://github.com/00Fjongl/js-extra/blob/0/Debugging/num.md)  
-[Basic minification](https://github.com/00Fjongl/js-extra/blob/0/Minification/basic.md)  
-[Further minification](https://github.com/00Fjongl/js-extra/blob/0/Minification/mini.md)  
-[Site minification](https://github.com/00Fjongl/js-extra/blob/0/Minification/page.md)  
-[Optimization](https://github.com/00Fjongl/js-extra/blob/0/Optimization/blink.md)  
-[Speed comparisons](https://github.com/00Fjongl/js-extra/blob/0/Optimization/speed.md)  
+[Regular expressions](Debugging/RegExp.md)  
+[Numerical rounding](Debugging/num.md)  
+[Basic minification](Minification/basic.md)  
+[Further minification](Minification/mini.md)  
+[Site minification](Minification/page.md)  
+[Optimization](Optimization/blink.md)  
+[Speed comparisons](Optimization/speed.md)  
   
 Note: Minification and optimization styles are specifically structured to align with strict mode.
