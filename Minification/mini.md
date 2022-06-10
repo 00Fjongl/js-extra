@@ -25,7 +25,7 @@ Object | Min. | Examples
 `123456+` | 2 | `String`, `Function`, `Math.ceil`
 `1234(5)` | 3 | `Math`, `Array`, `self`, `Date`
 `123` | 4 | `URL`, `Set`, `Map`, `CSS`, `top`
-`12` | 6
+`12` | 6 | `''`
 
 For shortening, destructuring should be used after combining at least **7** variables.
 ```js
