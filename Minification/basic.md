@@ -86,15 +86,16 @@ Order:
 4. Multiplication, division, and remainder (*,/,%)
 5. Addition and subraction (+,-)
 6. Bit shift (<<,>>,>>>)
-7. Comparison (<,<=,>,>=,==,!=,===,!==)
-8. Bitwise AND (&)
-9. Bitwise XOR (^)
-10. Bitwise OR (|)
-11. Logic (&&,||) and nullish coalescing (??)
-12. Ternary (condition?true:false)
-13. Assignment
-14. Destructuring (...)
-15. Comma (,)
+7. Comparison (<,<=,>,>=)
+8. Equality (==,!=,===,!==)
+9. Bitwise AND (&)
+10. Bitwise XOR (^)
+11. Bitwise OR (|)
+12. Logic (&&,||) and nullish coalescing (??)
+13. Ternary (condition?true:false)
+14. Assignment
+15. Destructuring (...)
+16. Comma (,)
 */
 ```
 Some switch statements may be substituted with arrays:
