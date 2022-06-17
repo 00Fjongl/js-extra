@@ -18,5 +18,5 @@ Certain scenarios may limit the usability of `BigInt`.
 #### Other notes
 * The exponentiation operator does not necessarily process from left to right. Instead, something like `2**3**2` is processed as `2**(3**2)`.
 * Bitwise operators will treat `NaN` and `Infinity` as `0`.
-* Arrays have a maximum length of `4294967295`. While attempting to create any longer arrays will throw an error, maximum length arrays can still be stored inside of other arrays.
+* Arrays have a maximum length of `2**32-1`. While attempting to create any longer arrays will throw an error, maximum length arrays can still be stored inside of other arrays.
 * `String.fromCodePoint` accepts integers from `0` to `1114111`. Any other integers will throw an error, unlike with `String.fromCharCode`, which effectively uses `65536+arguments[0]%65536`.
