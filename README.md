@@ -12,5 +12,5 @@ Contents:
 [Speed comparisons](Optimization/speed.md)  
   
 Note: Minification and optimization styles are specifically structured to align with strict mode.  
-Strict mode can be enabled by executing `"use strict";` or `'use strict';`, but not ``` `use strict`;``` at the beginning of a script, an HTML event listener attribute, a bookmarklet, or a new function scope.  
+Strict mode can be enabled by executing `"use strict";` or `'use strict';`, but not ``` `use strict`;```, at the beginning of a script, an HTML event listener attribute, a bookmarklet, or a new function scope.  
 Enabling strict mode will allow JavaScript interpreters to use more speed optimizations that will improve performance.
