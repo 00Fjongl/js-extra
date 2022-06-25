@@ -14,4 +14,6 @@ Avoid `x.startsWith` altogether, when `!x.indexOf` can be used instead. The latt
   
 Self-invoking functions lead to memory leaks, and will exceed the call stack limit in extreme cases. If they do not finish promptly, steer away from them. `for` loops, `while` loops, and `.forEach` loops have more reliable use cases. Self-invoking functions tend to be slowest, whereas a `while` loop tends to be fastest.  
   
-Division and remainder operators are noticeably slower than other operators. Instead of using something like `a/b<b`, use `a<b*b`.
+Division and remainder operators are noticeably slower than other operators. Instead of using something like `a/b<b`, use `a<b*b`.  
+  
+When it comes to long loops, the standard `for` loop will perform better than looping with `TypedArray.from`, `Array.from`, `.forEach`, `.map`, `for...of`, `for...in`, and `.replace`. The standard `while` loop will perform equally as well as the standard `for` loop in most cases. When it comes to optimizing the condition, if there is a property of an object being called or retrieved for each time the condition is evaluated, it should instead be assigned to a variable outside of the loop beforehand. Assigning it to a variable prevents it from having to attempt to reupdate the value of the condition.
