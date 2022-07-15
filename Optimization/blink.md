@@ -16,6 +16,4 @@ Self-invoking functions lead to memory leaks, and will exceed the call stack lim
   
 Division and remainder operators are noticeably slower than other operators. Instead of using something like `a/b<b`, use `a<b*b`.  
   
-When it comes to long loops, the standard `for` loop will perform better than looping with `TypedArray.from`, `Array.from`, `.forEach`, `.map`, `for...of`, `for...in`, and `.replace`. The standard `while` loop will perform equally as well as the standard `for` loop in most cases. When it comes to optimizing the condition, if there is a property of an object being called or retrieved for each time the condition is evaluated, it should instead be assigned to a variable outside of the loop beforehand. Assigning it to a variable prevents it from having to attempt to reupdate the value of the condition.  
-  
-Postfix operators happen to be faster than prefix operators, so stick to using something like `a++` over `++a`.
+When it comes to long loops, the standard `for` loop will perform better than looping with `TypedArray.from`, `Array.from`, `.forEach`, `.map`, `for...of`, `for...in`, and `.replace`. The standard `while` loop will perform equally as well as the standard `for` loop in most cases. When it comes to optimizing the condition, if there is a property of an object being called or retrieved for each time the condition is evaluated, it should instead be assigned to a variable outside of the loop beforehand. Assigning it to a variable prevents it from having to attempt to reupdate the value of the condition.
