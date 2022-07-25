@@ -42,7 +42,12 @@ Number(3n);
 1/(3n+'');
 1/[3n];
 ```
-`if` statements tend to be impractical; use ternary/conditional operators, Boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward `0`. It differs from `Math.floor` by rounding upward for negative integers, and reversing their sign after `2**31-1`.
+In many cases, `if...else` statements include curly brackets (`{}`) to group statements, and not merely group expressions. Some statements cannot be represented as expressions altogether, such as looping with the `while` or `for` keywords. However, for minification, it is advised to consider that statements which involve `if`, `while`, `for`, or other keywords can often be expressed without the curly brackets.
+```js
+if(x){y='true';console.log(x)}else{y='false'}
+if(x)y='true',console.log(x);else y='false';
+```
+`if` statements themselves tend to be impractical; use ternary/conditional operators, Boolean logic, math, and bitwise operations instead. With bitwise, `Number|0` is often used to round toward `0`. It differs from `Math.floor` by rounding upward for negative integers, and reversing their sign after `2**31-1`.
 ```js
 if(a==3)a=0;
 //0 is falsy
@@ -51,7 +56,6 @@ a-3||(a=0);
 a-3?0:a=0;
 a=a-3&&a;
 
-if(a==3){a=0}else{a=3}
 if(a==3)a=0;else a=3;
 a=a-3&&3;
 
