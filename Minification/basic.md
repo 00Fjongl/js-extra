@@ -48,12 +48,14 @@ if(a==3)a=0;
 //0 is falsy
 a-3||(a=0);
 //better
+a-3?0:a=0;
 a=a-3&&a;
 
 if(a==3){a=0}else{a=3}
+if(a==3)a=0;else a=3;
 a=a-3&&3;
 
-if(a=='c'){a='b'}else{a='c'}
+if(a=='c')a='b';else a='c';
 a=a=='c'?'b':'c';
 a='cb'[a=='c'|0];
 
