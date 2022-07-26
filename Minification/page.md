@@ -24,7 +24,7 @@ Standard | Substitute
 `<input onkeyup="delete self.onkeyup">` | `<input onkeyup=delete(self.onkeyup)>`
 `<img src hidden onerror="setInterval(console.log,10,'test')">` | `<img src hidden onerror="src=src;console.log('test')">` or `<img src hidden onerror="src=console.log('test')">`
 # Filenames
-Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed.
+Files requested through the Node.js filesystem, client-side scripts, or HTML code can be optimized if renamed to follow a certain constraint, such as a one-character name, for easier indexing.
 ```js
 //basic querystring system
 switch(file){case'a':console.log('first.html');break;case'b':console.log('second.html');break;default:console.log('third.html')}
