@@ -4,7 +4,7 @@ Currently a work-in-progress.
   
 Contents:  
 [Regular expressions](Debugging/RegExp.md)  
-[Numerical rounding](Debugging/num.md)  
+[Numerical behavior](Debugging/num.md)  
 [Basic minification](Minification/basic.md)  
 [Further minification](Minification/mini.md)  
 [Site minification](Minification/page.md)  
