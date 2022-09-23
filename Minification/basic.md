@@ -90,7 +90,7 @@ Order:
 2. Chaining (.,?.,a[a]) and calling (a(),a``)
 3. Postfix (a++,a--), prefix (++a,--a), unary (!,~,+,-) and exponent (**)
 4. Multiplication, division, and remainder (*,/,%)
-5. Addition and subraction (+,-)
+5. Addition and subtraction (+,-)
 6. Bit shift (<<,>>,>>>)
 7. Comparison (<,<=,>,>=)
 8. Equality (==,!=,===,!==)
