@@ -2,7 +2,7 @@
 The regular expression implementation in JavaScript may differ slightly from other languages, such as Python.  
 An expression written in JavaScript is more likely to cause errors when transported to Python's implementation.  
 When transporting outside of JavaScript:
-* Look-behind assertions must be fixed-width, meaning that the number of characters cannot vary.
+* A look-behind assertion must be fixed-width, meaning that the number of characters cannot vary.
   * This does not limit the use of assertions for several terms with the same length, or the use of look-ahead assertions.
 * `[^]` may throw an error.
 * Word breaks signified by `\b` may not function as intended.
