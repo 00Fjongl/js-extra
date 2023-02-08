@@ -42,7 +42,7 @@ Number(3n);
 1/(3n+'');
 1/[3n];
 ```
-In many cases, `if...else` statements include curly brackets (`{}`) to group statements, and not merely to group expressions. The same applies to loops. When considering this for minification, the curly brackets can be removed after turning the grouped statements into expressions, by using commas in place of semicolons. Some statements, such as loops which rely on the `while` or `for` keywords, cannot be represented as expressions. However, many other kinds of statements that do not rely on keywords can be turned into expressions, allowing them to be further compacted into one statement.
+In many cases, `if...else` statements and loops include curly brackets (`{}`) to group statements, and not merely to group expressions. If semicolons separate statements, then commas separate expressions. For minification, the curly brackets can be removed if everything inside is turned into expressions. Some statements, such as loops which rely on the `while` or `for` keywords, cannot be represented as expressions. However, many other kinds of statements that do not rely on keywords can be turned into expressions, allowing them to be further compacted into one statement.
 ```js
 if(x){y='true';console.log(x)}else{y='false'}
 if(x)y='true',console.log(x);else y='false';
