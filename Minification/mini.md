@@ -128,7 +128,7 @@ a**2+1;
 a*a+1;
 +a+!a;
 a==a;        //only for numbers
-!a-a;        //while a is not [] or [something false-y]
+a-!a;        //while a is not [] or [something false-y]
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
