@@ -127,8 +127,8 @@ Math.ceil(a);
 a**2+1;
 a*a+1;
 +a+!a;
-a==a;        //while typeof a!='object' and a!=undefined
-a+!a;        //while typeof a!='object'
+a==a;        //only for numbers and arrays
+a+!a;        //while typeof a!='object' and typeof a!='string'
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
