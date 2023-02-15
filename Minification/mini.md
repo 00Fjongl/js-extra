@@ -126,6 +126,7 @@ Math.ceil(a);
 isNaN(a);
 a**2+1;      //for !isNaN(a)
 a*a+1;
++a+!a;
 a!=a;        //while typeof a!='object' and a!=undefined
 a+!a;        //while typeof a!='object'
 ```
