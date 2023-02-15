@@ -126,7 +126,6 @@ Math.ceil(a);
 !isNaN(a);
 a**2+1;
 a*a+1;
-+a+!a;
 a==a;        //only for numbers
 a-!a;        //while a is not [] or [something false-y]
 ```
