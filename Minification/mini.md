@@ -96,6 +96,8 @@ a=null,c=a&=b=256;
 a=(a+(b=c))%256;
 a=(a+=b=c)%256;
 a+=b=c,a%=256;
+a+=b=c,a&=255;
+a=a+(b=c)&255;
 ```
 ###### Replacing `.startsWith`
 The `.startsWith` function is made completely useless by this usage of `.indexOf`. It's not only shorter; it's faster!
@@ -124,7 +126,7 @@ Math.ceil(a);
 isNaN(a);
 a**2+1;      //for !isNaN(a)
 a*a+1;
-a!=a;        //while typeof a!='object'
+a!=a;        //while typeof a!='object' and a!=undefined
 ```
 While functions such as `setTimeout` and `Array.prototype.push` return varying integers, they cannot return `0`, so any logic that happens to include them may be reformatted.
 ```js
